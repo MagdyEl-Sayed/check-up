@@ -26,6 +26,7 @@ int counter=0;
         shopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Main_Menu.class));
                 Toast.makeText(getApplicationContext(),"shopping clicked",Toast.LENGTH_LONG).show();
             }
         });

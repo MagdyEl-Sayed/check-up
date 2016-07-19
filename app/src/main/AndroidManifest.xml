@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gm7.checkup">
-<uses-sdk android:minSdkVersion="16">
 
-</uses-sdk>
+    <uses-sdk android:minSdkVersion="16"></uses-sdk>
+
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -19,16 +23,15 @@
         </activity>
         <activity
             android:name=".Login"
-            android:label="login"
-            >
-        </activity>
-
-        <activity
-            android:name=".SignUPActivity"/>
+            android:label="login"></activity>
+        <activity android:name=".SignUPActivity" />
         <activity
             android:name=".MainActivity"
-            android:label="Main" >
-        </activity>
+            android:label="Main"></activity>
+        <activity
+            android:name=".Main_Menu"
+            android:label="@string/title_activity_main__menu"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

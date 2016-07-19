@@ -1,2 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/media/emadahmed/Programs/WORK_PLACE/AndroidWorkpalce/checkup/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="894922f67adeaaef51f077a29e315da21a3382d3">
+        <dex dex="/media/emadahmed/Programs/WORK_PLACE/AndroidWorkpalce/checkup/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.0.0_18fbe58e6cb94a556200560de18f1b64a56f9f90.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs/WORK_PLACE/AndroidWorkpalce/checkup/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="fc29308a7a8f6d4407b34634eb48fb8b817f9b23">
+        <dex dex="/media/emadahmed/Programs/WORK_PLACE/AndroidWorkpalce/checkup/app/build/intermediates/pre-dexed/debug/com.android.support-design-24.0.0_69b5ac0e958de02f94630ac615941d2fc9c5f920.jar" />
+    </item>
+
+</items>
