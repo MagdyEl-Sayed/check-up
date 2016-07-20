@@ -18,6 +18,7 @@ import static com.example.gm7.checkup.R.id.activity_main;
 public class MainActivity extends AppCompatActivity {
 int counter=0;
     private ImageButton shopping;
+    //Fuck u _!_
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
