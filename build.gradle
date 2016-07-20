@@ -3,9 +3,13 @@
 buildscript {
     repositories {
         jcenter()
+
     }
     repositories{
+        //add this Repo for facebook integration
         mavenCentral()
+        //add this Repo for twitter integration
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.2'

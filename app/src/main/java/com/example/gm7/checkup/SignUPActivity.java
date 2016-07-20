@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.askerlap.emadahmed.checkup.R;
+
 public class SignUPActivity extends Activity {
     EditText editTextUserName, editTextPassword, editTextConfirmPassword, editTextEmail;
     Button btnCreateAccount, btnrecoverypass;
