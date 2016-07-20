@@ -148,12 +148,13 @@
             android:orientation="vertical"
 
             >
-
-            <Button
-                android:id="@+id/btn_face"
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/fb_login"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/face_login_click" />
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <LinearLayout
@@ -166,6 +167,7 @@
 
             <Button
                 android:id="@+id/btn_twitter"
+                android:layout_marginTop="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/twitter_login_click" />

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gm7.checkup">
+    package="com.askerlap.emadahmed.checkup">
 
-    <uses-sdk android:minSdkVersion="16"></uses-sdk>
+    <uses-sdk android:minSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -10,7 +13,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreen">
+        <activity android:name="com.example.gm7.checkup.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,12 +21,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Login"
-            android:label="login"></activity>
-        <activity android:name=".SignUPActivity" />
+            android:name="com.example.gm7.checkup.Login"
+            android:label="login" />
+        <activity android:name="com.example.gm7.checkup.SignUPActivity" />
         <activity
-            android:name=".MainActivity"
-            android:label="Main"></activity>
+            android:name="com.example.gm7.checkup.MainActivity"
+            android:label="Main" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <!-- Facebook Activity Added -->
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     </application>
 
 </manifest>

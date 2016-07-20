@@ -5,14 +5,24 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+
+import com.askerlap.emadahmed.checkup.R;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 
 /**
  * Created by GM7 on 03/07/2016.
@@ -21,13 +31,16 @@ import android.widget.Toast;
 public class Login extends Activity {
     EditText txt1, txt2;
     ImageView img;
-    Button btn1, btn2, btn3, btn4, btn5;
+    Button btn1, btn3, btn4, btn5;
+    LoginButton faceelogin;
     LoginDataBaseAdapter loginDataBaseAdapter;
     private ProgressDialog progressDialog;
+CallbackManager callbackManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        facebookSDKInitialize();
         setContentView(R.layout.activity_main);
         loginDataBaseAdapter = new LoginDataBaseAdapter(this);
         loginDataBaseAdapter = loginDataBaseAdapter.open();
@@ -35,7 +48,9 @@ public class Login extends Activity {
         txt2 = (EditText) findViewById(R.id.editText2);
         img = (ImageView) findViewById(R.id.errormessage);
         btn1 = (Button) findViewById(R.id.btn);
-        btn2 = (Button) findViewById(R.id.btn_face);
+        faceelogin = (LoginButton) findViewById(R.id.fb_login);
+        faceelogin.setReadPermissions("email");
+        getLoginDetails(faceelogin);
         btn3 = (Button) findViewById(R.id.btn_twitter);
         btn4 = (Button) findViewById(R.id.btn_google);
         btn5 = (Button) findViewById(R.id.btn_signup);
@@ -102,6 +117,38 @@ public class Login extends Activity {
                 startActivity(intentSignUP);
             }
         });
+    }
+protected void facebookSDKInitialize(){
+    FacebookSdk.sdkInitialize(getApplicationContext());
+    callbackManager=CallbackManager.Factory.create();
+
+}
+    protected void getLoginDetails(LoginButton loginButton){
+        //call back registration
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Intent i=new Intent(Login.this, MainActivity.class);
+                startActivity(i);
+            }
+
+            @Override
+            public void onCancel() {
+
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode,resultCode,data);
+        Log.e("data",data.toString());
     }
 
     @Override
