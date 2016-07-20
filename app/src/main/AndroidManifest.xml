@@ -25,10 +25,6 @@
         <activity
             android:name=".MainActivity"
             android:label="Main"></activity>
-        <activity
-            android:name=".Main_Menu"
-            android:label="@string/title_activity_main__menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
