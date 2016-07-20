@@ -24,6 +24,8 @@ int counter=0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_man_menu   );
         shopping=(ImageButton) findViewById(R.id.btn_shopping);
+        Toast.makeText(getApplicationContext(),"hhhhhhhhhhhhhhhhh",Toast.LENGTH_LONG).show();
+
         shopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
