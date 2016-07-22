@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.askerlap.emadahmed.checkup.R;
+
 /**
  * Created by PEACE on 3/30/2016.
  */

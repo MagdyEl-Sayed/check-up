@@ -37,7 +37,11 @@ public class DataBaseHelper extends SQLiteOpenHelper
 			// Create a new one.
 		// If you need to add a column
 		if (_newVersion == 2) {
-			_db.execSQL("ALTER TABLE LOGin ADD COLUMN EMAIL text");
+			_db.execSQL("ALTER TABLE SHOP ADD COLUMN EMAIL text");
+			_db.execSQL("ALTER TABLE SHOP ADD COLUMN PHONE text");
+			_db.execSQL("ALTER TABLE SHOP ADD COLUMN ADDRESS text");
+			_db.execSQL("ALTER TABLE SHOP ADD COLUMN LAST_VISIT text");
+
 		}
 			onCreate(_db);
 	}

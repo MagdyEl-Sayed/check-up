@@ -13,7 +13,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static com.example.gm7.checkup.R.id.activity_main;
+import com.askerlap.emadahmed.checkup.R;
+
 
 public class MainActivity extends AppCompatActivity {
 int counter=0;

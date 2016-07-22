@@ -9,14 +9,14 @@ import android.database.sqlite.SQLiteDatabase;
 import static android.R.attr.name;
 
 public class LoginDataBaseAdapter {
-    static final String DATABASE_NAME = "login";
+    static final String DATABASE_NAME = "shop";
     static final int DATABASE_VERSION = 1;
     public static final int NAME_COLUMN = 1;
     // TODO: Create public field for each column in your table.
     // SQL Statement to create a new database.
-    static final String DATABASE_CREATE = "create table " + "LOGin" +
+    static final String DATABASE_CREATE = "create table " + "SHOP" +
             "( " + "ID" + " integer primary key autoincrement," +
-            "USERNAME  text,EMAIL text,PASSWORD text); ";
+            "USERNAME  text,EMAIL text,PASSWORD text,PHONE text,ADDRESS text,LAST_VISIT text); ";
     // Variable to hold the database instance
     public SQLiteDatabase db;
     // Context of the application using the database.
@@ -48,22 +48,25 @@ public class LoginDataBaseAdapter {
         newValues.put("USERNAME", userName);
         newValues.put("EMAIL", email);
         newValues.put("PASSWORD", password);
+        newValues.put("PHONE", "01015639329");
+        newValues.put("ADDRESS","Kafr ali");
+        newValues.put("LAST_VISIT","10am");
 
         // Insert the row into your table
-        db.insert("LOGin", null, newValues);
+        db.insert("SHOP", null, newValues);
         ///Toast.makeText(context, "Reminder Is Successfully Saved", Toast.LENGTH_LONG).show();
     }
 
     public int deleteEntry(String UserName) {
         //String id=String.valueOf(ID);
         String where = "USERNAME=?";
-        int numberOFEntriesDeleted = db.delete("LOGIN", where, new String[]{UserName});
+        int numberOFEntriesDeleted = db.delete("SHOP", where, new String[]{UserName});
         // Toast.makeText(context, "Number fo Entry Deleted Successfully : "+numberOFEntriesDeleted, Toast.LENGTH_LONG).show();
         return numberOFEntriesDeleted;
     }
 
     public String getSinlgeEntry(String userName) {
-        Cursor cursor = db.query("LOGin", null, "USERNAME=? ", new String[]{userName}, null, null, null);
+        Cursor cursor = db.query("SHOP", null, "USERNAME=? ", new String[]{userName}, null, null, null);
         //Cursor cursor=db.query("LOGIN", null, "EMAIL=?", new String[]{email}, null, null, null);
         if (cursor.getCount() < 1) // UserName Not Exist
         {
@@ -77,7 +80,7 @@ public class LoginDataBaseAdapter {
     }
 
     public String getSinlgeEnt(String userName) {
-        Cursor cursor = db.query("LOGin", null, "EMAIL=? ", new String[]{userName}, null, null, null);
+        Cursor cursor = db.query("SHOP", null, "EMAIL=? ", new String[]{userName}, null, null, null);
 
         if (cursor.getCount() < 1) // UserName Not Exist
         {
@@ -98,13 +101,13 @@ public class LoginDataBaseAdapter {
         updatedValues.put("PASSWORD", password);
 
         String where = "USERNAME = ?";
-        db.update("LOGIN", updatedValues, where, new String[]{userName});
+        db.update("SHOP", updatedValues, where, new String[]{userName});
     }
 
     //
     public String check(String username) {
 
-        Cursor cursor = db.query("LOGin", null, "EMAIL=? ", new String[]{username}, null, null, null);
+        Cursor cursor = db.query("SHOP", null, "EMAIL=? ", new String[]{username}, null, null, null);
         //Cursor cursor=db.query("LOGIN", null, "EMAIL=?", new String[]{email}, null, null, null);
         if (cursor.getCount() < 1) // UserName Not Exist
         {
@@ -121,7 +124,7 @@ public class LoginDataBaseAdapter {
     //
     public String recoverypass(String email) {
 
-        Cursor cursor = db.query("LOGin", null, "EMAIL=? ", new String[]{email}, null, null, null);
+        Cursor cursor = db.query("SHOP", null, "EMAIL=? ", new String[]{email}, null, null, null);
         //Cursor cursor=db.query("LOGIN", null, "EMAIL=?", new String[]{email}, null, null, null);
         if (cursor.getCount() < 1) // UserName Not Exist
         {

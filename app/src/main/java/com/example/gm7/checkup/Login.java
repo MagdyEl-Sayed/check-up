@@ -64,6 +64,7 @@ CallbackManager callbackManager;
                 // fetch the Password form database for respective user name
                 String storedPassword = loginDataBaseAdapter.getSinlgeEntry(userName);
                 String storedPassword1 = loginDataBaseAdapter.getSinlgeEnt(userName);
+                Toast.makeText(getBaseContext(),storedPassword,Toast.LENGTH_SHORT).show();
                 //
                 if (txt1.getText().toString().isEmpty()) {
                     txt1.setError("UserName Should not be blank");
