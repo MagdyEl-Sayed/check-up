@@ -23,6 +23,11 @@ import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.twitter.sdk.android.core.Callback;
+import com.twitter.sdk.android.core.Result;
+import com.twitter.sdk.android.core.TwitterException;
+import com.twitter.sdk.android.core.TwitterSession;
+import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 
 /**
  * Created by GM7 on 03/07/2016.
@@ -33,6 +38,7 @@ public class Login extends Activity {
     ImageView img;
     Button btn1, btn3, btn4, btn5;
     LoginButton faceelogin;
+    TwitterLoginButton twitterlogin;
     LoginDataBaseAdapter loginDataBaseAdapter;
     private ProgressDialog progressDialog;
 CallbackManager callbackManager;
@@ -50,8 +56,20 @@ CallbackManager callbackManager;
         btn1 = (Button) findViewById(R.id.btn);
         faceelogin = (LoginButton) findViewById(R.id.fb_login);
         faceelogin.setReadPermissions("email");
+        twitterlogin = (TwitterLoginButton) findViewById(R.id.twitter_login_button);
+        twitterlogin.setCallback(new Callback<TwitterSession>() {
+            @Override
+            public void success(Result<TwitterSession> result) {
+                Intent i=new Intent(Login.this, MainActivity.class);
+                startActivity(i);
+            }
+            @Override
+            public void failure(TwitterException exception) {
+                Log.d("TwitterKit", "Login with Twitter failure", exception);
+            }
+        });
+
         getLoginDetails(faceelogin);
-        btn3 = (Button) findViewById(R.id.btn_twitter);
         btn4 = (Button) findViewById(R.id.btn_google);
         btn5 = (Button) findViewById(R.id.btn_signup);
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -149,6 +167,7 @@ protected void facebookSDKInitialize(){
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode,resultCode,data);
+        twitterlogin.onActivityResult(requestCode,resultCode,data);
         Log.e("data",data.toString());
     }
 
