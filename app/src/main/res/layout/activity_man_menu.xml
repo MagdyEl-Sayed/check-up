@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             android:src="@mipmap/ic_launcher"
             android:id="@+id/btn_shopping"
-            android:paddingTop="32sp"
+            android:paddingTop="22sp"
             android:text="Shops"
 
             style="?android:attr/buttonBarButtonStyle"
@@ -23,7 +23,35 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="#fff53fff"/>
+            android:background="#d2d3d3"/>
+        <Button
+
+            android:drawableLeft="@mipmap/bill_ic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/btn_report"
+            android:paddingTop="22sp"
+            android:text="Bill Report"
+
+            style="?android:attr/buttonBarButtonStyle"
+            android:gravity="start|center_vertical"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#d2d3d3"/>
+        <Button
+
+            android:drawableLeft="@mipmap/sales_ic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/btn_salesItem"
+            android:paddingTop="22sp"
+            android:text="Sales Items"
+
+            style="?android:attr/buttonBarButtonStyle"
+            android:gravity="start|center_vertical"/>
     </LinearLayout>
 
 </ScrollView>
