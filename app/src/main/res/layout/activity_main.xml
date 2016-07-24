@@ -144,49 +144,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="370dp"
+            android:layout_marginTop="340dp"
             android:orientation="vertical"
 
             >
             <com.facebook.login.widget.LoginButton
                 android:id="@+id/fb_login"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="425dp"
-            android:orientation="vertical">
-<com.twitter.sdk.android.core.identity.TwitterLoginButton
-    android:id="@+id/twitter_login_button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="480dp"
-            android:orientation="vertical">
-
-
-            <Button
-                android:id="@+id/btn_google"
+            <com.twitter.sdk.android.core.identity.TwitterLoginButton
+                android:id="@+id/twitter_login_button"
                 android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/google_login_click" />
+                android:layout_centerInParent="true"
+                />
         </LinearLayout>
+
+
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

@@ -70,7 +70,7 @@ CallbackManager callbackManager;
         });
 
         getLoginDetails(faceelogin);
-        btn4 = (Button) findViewById(R.id.btn_google);
+
         btn5 = (Button) findViewById(R.id.btn_signup);
         btn1.setOnClickListener(new View.OnClickListener() {
 
