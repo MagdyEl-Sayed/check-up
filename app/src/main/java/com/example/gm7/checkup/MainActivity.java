@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,13 +19,13 @@ import com.askerlap.emadahmed.checkup.R;
 
 public class MainActivity extends AppCompatActivity {
 int counter=0;
-    private ImageButton shopping;
+    private Button shopping;
     //Fuck u _!_
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_man_menu   );
-        shopping=(ImageButton) findViewById(R.id.btn_shopping);
+        shopping=(Button) findViewById(R.id.btn_shopping);
 
 
         shopping.setOnClickListener(new View.OnClickListener() {

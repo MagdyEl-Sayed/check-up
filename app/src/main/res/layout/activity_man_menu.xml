@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.gm7.checkup.MainActivity">
-<ImageButton
-    android:layout_width="wrap_content"
+     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:src="@mipmap/ic_launcher"
-    android:id="@+id/btn_shopping"
-    />
-</LinearLayout>
+    tools:context="com.example.gm7.checkup.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <Button
+
+            android:drawableLeft="@mipmap/shop_ic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/btn_shopping"
+            android:paddingTop="32sp"
+            android:text="Shops"
+
+            style="?android:attr/buttonBarButtonStyle"
+            android:gravity="start|center_vertical"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#fff53fff"/>
+    </LinearLayout>
+
+</ScrollView>

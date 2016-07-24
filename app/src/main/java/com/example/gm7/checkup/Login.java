@@ -41,14 +41,16 @@ public class Login extends Activity {
     TwitterLoginButton twitterlogin;
     LoginDataBaseAdapter loginDataBaseAdapter;
     private ProgressDialog progressDialog;
+    private DB_shoppingHelper shopHelper;
 CallbackManager callbackManager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         facebookSDKInitialize();
         setContentView(R.layout.activity_main);
         loginDataBaseAdapter = new LoginDataBaseAdapter(this);
+        shopHelper=new DB_shoppingHelper(this);
         loginDataBaseAdapter = loginDataBaseAdapter.open();
         txt1 = (EditText) findViewById(R.id.editText);
         txt2 = (EditText) findViewById(R.id.editText2);
@@ -60,7 +62,12 @@ CallbackManager callbackManager;
         twitterlogin.setCallback(new Callback<TwitterSession>() {
             @Override
             public void success(Result<TwitterSession> result) {
+                TwitterSession session=result.data;
+                String user_Name=session.getUserName();
                 Intent i=new Intent(Login.this, MainActivity.class);
+                i.putExtra("username",user_Name);
+                shopHelper.getWritableDatabase();
+                shopHelper.insertUserName(user_Name);
                 startActivity(i);
             }
             @Override
@@ -147,7 +154,7 @@ protected void facebookSDKInitialize(){
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                Intent i=new Intent(Login.this, MainActivity.class);
+                 Intent i=new Intent(Login.this, MainActivity.class);
                 startActivity(i);
             }
 

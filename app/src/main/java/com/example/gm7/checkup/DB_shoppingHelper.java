@@ -1,5 +1,6 @@
 package com.example.gm7.checkup;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -37,5 +38,12 @@ public class DB_shoppingHelper extends SQLiteOpenHelper {
         onCreate(db);
 
 
+    }
+    public boolean insertUserName(String name){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues values=new ContentValues();
+        values.put("user_name",name);
+        db.insert(SHOP_TABEL,null, values);
+        return true;
     }
 }
