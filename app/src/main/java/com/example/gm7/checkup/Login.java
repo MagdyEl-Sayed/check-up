@@ -67,7 +67,7 @@ CallbackManager callbackManager;
                 Intent i=new Intent(Login.this, MainActivity.class);
                 i.putExtra("username",user_Name);
                 shopHelper.getWritableDatabase();
-                shopHelper.insertUserName(user_Name);
+                //shopHelper.insertEntry(user_Name);
                 startActivity(i);
             }
             @Override

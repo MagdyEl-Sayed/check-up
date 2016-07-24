@@ -20,7 +20,7 @@ android {
     buildToolsVersion "24.0.0"
     defaultConfig {
 
-        applicationId "com.askerlap.emadahmed.checkup"
+        applicationId "com.example.gm7.checkup"
         minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
