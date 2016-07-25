@@ -5,7 +5,10 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -15,9 +18,9 @@ import android.widget.Toast;
 
 import com.askerlap.emadahmed.checkup.R;
 
-public class SignUPActivity extends Activity {
+public class SignUPActivity extends AppCompatActivity {
     EditText editTextUserName, editTextPassword, editTextConfirmPassword, editTextEmail;
-    Button btnCreateAccount, btnrecoverypass;
+    Button btnCreateAccount;
 
     LoginDataBaseAdapter loginDataBaseAdapter;
 
@@ -39,7 +42,7 @@ public class SignUPActivity extends Activity {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
 
         btnCreateAccount = (Button) findViewById(R.id.buttonCreateAccount);
-        btnrecoverypass = (Button) findViewById(R.id.buttonrecoverypass);
+//        btnrecoverypass = (Button) findViewById(R.id.buttonrecoverypass);
         btnCreateAccount.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -121,16 +124,16 @@ public class SignUPActivity extends Activity {
 
             }
         });
-        btnrecoverypass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String email = editTextEmail.getText().toString();
-                String storedPassword = loginDataBaseAdapter.recoverypass(email);
-                sendEmail(email, storedPassword);
-
-
-            }
-        });
+//        btnrecoverypass.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                String email = editTextEmail.getText().toString();
+//                String storedPassword = loginDataBaseAdapter.recoverypass(email);
+//                sendEmail(email, storedPassword);
+//
+//
+//            }
+//        });
     }
 
     @Override
@@ -161,5 +164,15 @@ public class SignUPActivity extends Activity {
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(SignUPActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+switch (item.getItemId()){
+    case android.R.id.home:
+        NavUtils.navigateUpFromSameTask(this);
+        return true;
+}
+        return super.onOptionsItemSelected(item);
     }
 }

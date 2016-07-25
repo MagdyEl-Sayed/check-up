@@ -6,8 +6,11 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
 
 import android.widget.Button;
@@ -33,14 +36,13 @@ import com.twitter.sdk.android.core.identity.TwitterLoginButton;
  * Created by GM7 on 03/07/2016.
  */
 
-public class Login extends Activity {
+public class Login extends AppCompatActivity {
     EditText txt1, txt2;
-    ImageView img;
-    Button btn1, btn3, btn4, btn5;
+//    ImageView img;
+    Button btn1;
     LoginButton faceelogin;
     TwitterLoginButton twitterlogin;
     LoginDataBaseAdapter loginDataBaseAdapter;
-    private ProgressDialog progressDialog;
     private DB_shoppingHelper shopHelper;
 CallbackManager callbackManager;
 
@@ -49,12 +51,14 @@ CallbackManager callbackManager;
         super.onCreate(savedInstanceState);
         facebookSDKInitialize();
         setContentView(R.layout.activity_main);
+        assert  getSupportActionBar() !=null;
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         loginDataBaseAdapter = new LoginDataBaseAdapter(this);
         shopHelper=new DB_shoppingHelper(this);
         loginDataBaseAdapter = loginDataBaseAdapter.open();
         txt1 = (EditText) findViewById(R.id.editText);
         txt2 = (EditText) findViewById(R.id.editText2);
-        img = (ImageView) findViewById(R.id.errormessage);
+//        img = (ImageView) findViewById(R.id.errormessage);
         btn1 = (Button) findViewById(R.id.btn);
         faceelogin = (LoginButton) findViewById(R.id.fb_login);
         faceelogin.setReadPermissions("email");
@@ -78,7 +82,6 @@ CallbackManager callbackManager;
 
         getLoginDetails(faceelogin);
 
-        btn5 = (Button) findViewById(R.id.btn_signup);
         btn1.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -117,32 +120,21 @@ CallbackManager callbackManager;
                                     // Toast.makeText(getBaseContext(), "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(Login.this, MainActivity.class);
                                     startActivity(intent);
-                                    img.setVisibility(View.INVISIBLE);
+//                                    img.setVisibility(View.INVISIBLE);
                                     progressDialog.dismiss();
                                 }
                             }, 3000);
 
 
                 } else {
-                    img.setVisibility(View.VISIBLE);
+//                    img.setVisibility(View.VISIBLE);
                     Toast.makeText(getBaseContext(), "User Name or Password does not match", Toast.LENGTH_LONG).show();
                 }
 
 
             }
         });
-        //
 
-
-        // }
-        //});
-        btn5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentSignUP = new Intent(getApplicationContext(), SignUPActivity.class);
-                startActivity(intentSignUP);
-            }
-        });
     }
 protected void facebookSDKInitialize(){
     FacebookSdk.sdkInitialize(getApplicationContext());
@@ -196,5 +188,15 @@ protected void facebookSDKInitialize(){
         super.onDestroy();
         // Close The Database
         loginDataBaseAdapter.close();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+switch (item.getItemId()){
+    case android.R.id.home:
+        NavUtils.navigateUpFromSameTask(this);
+        return true;
+}
+        return super.onOptionsItemSelected(item);
     }
 }

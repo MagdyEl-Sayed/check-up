@@ -2,81 +2,103 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    android:background="#20406b"
+    android:background="@drawable/shoppingbc"
     >
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Registration"
-    android:textColor="#ffff"
     android:textStyle="normal|bold"
     android:textSize="36sp"
-    android:textAlignment="center"
-    android:layout_marginTop="40dp"
+    android:gravity="center"
+
     />
     <EditText
+        android:background="@drawable/group_top"
         android:id="@+id/editTextUserName"
         android:hint="User Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
         android:textStyle="normal|italic"
-        android:background="@drawable/user_name"
-android:layout_marginTop="35dp"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
         >
 
         <requestFocus />
     </EditText>
     <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/group_row" />
+    <EditText
+        android:background="@drawable/group_bottom"
         android:id="@+id/editTextEmail"
+        android:padding="10dp"
         android:hint="Email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-android:inputType="textEmailAddress"
-        android:textAlignment="center"
+        android:inputType="textEmailAddress"
+        android:ems="10"
         android:textStyle="normal|italic"
-        android:background="@drawable/user_name"
-
         />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/group_row" />
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-         android:hint="Password"
+        android:hint="Password"
+        android:ems="10"
+        android:padding="10dp"
+        android:background="@drawable/group_top"
         android:inputType="textPassword"
-        android:textAlignment="center"
         android:textStyle="normal|italic"
-        android:background="@drawable/user_name"
         />
-
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/group_row" />
     <EditText
         android:id="@+id/editTextConfirmPassword"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="Confirm Password"
+        android:background="@drawable/group_bottom"
+        android:padding="10dp"
+        android:ems="10"
         android:inputType="textPassword"
-        android:textAlignment="center"
         android:textStyle="normal|italic"
-        android:background="@drawable/user_name"
-
         />
-
-    <Button
-        android:id="@+id/buttonCreateAccount"
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create Account"
-        android:layout_marginBottom="60dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/login_btn"
-        />
-    <Button
+        android:gravity="right"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/buttonCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+             android:background="@drawable/log_in"
+            android:text="SIGN UP"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+  <!--  <Button
         android:id="@+id/buttonrecoverypass"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="recovery pass"
         android:background="@drawable/login_btn"
-        />
+        />-->
     
 </LinearLayout>
