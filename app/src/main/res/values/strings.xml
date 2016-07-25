@@ -11,4 +11,8 @@
     <string name="totalBill">total bill: </string>
     <string name="title_activity_sales__items">My sales</string>
     <string name="title_activity_sales_items">New Items</string>
+    <string name="itemName">Item Name</string>
+    <string name="itemPrice">Item Price</string>
+    <string name="itemType">Item Type</string>
+    <string name="salesDate">Date</string>
 </resources>

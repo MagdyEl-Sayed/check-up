@@ -1,11 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_sales_items"
     android:layout_width="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context="com.example.gm7.checkup.sales_items"
     tools:showIn="@layout/activity_sales_items">
+    <EditText
+        android:hint="@string/itemName"
+        android:maxLength="15"
+        android:ems="10"
+        android:textStyle="normal|italic"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:hint="@string/itemPrice"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:textStyle="normal|italic"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:hint="@string/itemType"
+        android:maxLength="25"
+        android:ems="10"
+        android:textStyle="normal|italic"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:hint="@string/shopName"
+        android:maxLength="15"
+        android:ems="10"
+        android:textStyle="normal|italic"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:hint="@string/shopAddress"
+        android:maxLength="15"
+        android:ems="10"
+        android:textStyle="normal|italic"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:hint="@string/shopPhone"
+        android:maxLength="11"
+        android:inputType="numbergit"
+        android:ems="10"
+        android:textStyle="normal|italic"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        style="?android:attr/buttonBarButtonStyle"
+        android:paddingTop="10sp"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:hint="@string/salesDate"
 
-</android.support.constraint.ConstraintLayout>
+        android:id="@+id/ed_date" />
+</LinearLayout>
