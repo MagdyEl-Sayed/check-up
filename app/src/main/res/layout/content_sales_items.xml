@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_sales_items"
@@ -8,4 +8,4 @@
     tools:context="com.example.gm7.checkup.sales_items"
     tools:showIn="@layout/activity_sales_items">
 
-</ListView>
+</android.support.constraint.ConstraintLayout>
