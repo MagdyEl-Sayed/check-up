@@ -137,5 +137,17 @@ public class LoginDataBaseAdapter {
         return password;
 
     }
+    //Method to get UserName
+    public String getUserName( ){
+            String password=null;
+
+            Cursor cursor = db.rawQuery("select USERNAME from " + DATABASE_NAME, null);
+            cursor.moveToFirst();
+
+            if(cursor.moveToFirst()){
+                password=cursor.getString(cursor.getColumnIndex("USERNAME"));
+            }
+            return password;
+        }
 }
 

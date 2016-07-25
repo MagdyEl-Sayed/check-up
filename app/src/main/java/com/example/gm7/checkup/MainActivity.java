@@ -21,15 +21,20 @@ import com.askerlap.emadahmed.checkup.R;
 
 public class MainActivity extends AppCompatActivity {
 int counter=0;
-    private Button shopping;
+    private Button shopping,sales_items;
     //Fuck u _!_
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_man_menu   );
         shopping=(Button) findViewById(R.id.btn_shopping);
-
-
+        sales_items=(Button)findViewById(R.id.btn_salesItem);
+        sales_items.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,sales_items.class));
+            }
+        });
         shopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

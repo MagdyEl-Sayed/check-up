@@ -4,4 +4,11 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="facebook_app_id">281836965505728</string>
+    <string name="shopName">shop name: </string>
+    <string name="shopPhone">shop phone: </string>
+    <string name="shopAddress">shop address: </string>
+    <string name="lastVisit">last visit: </string>
+    <string name="totalBill">total bill: </string>
+    <string name="title_activity_sales__items">My sales</string>
+    <string name="title_activity_sales_items">New Items</string>
 </resources>

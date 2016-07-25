@@ -11,7 +11,7 @@ import com.askerlap.emadahmed.checkup.R;
  * Created by PEACE on 3/30/2016.
  */
 public class SplashScreen extends AppCompatActivity {
-
+private LoginDataBaseAdapter login_helper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -19,7 +19,8 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.splash);
         assert getSupportActionBar() !=null;
         getSupportActionBar().hide();
-
+        login_helper=new LoginDataBaseAdapter(this);
+        login_helper.open();
         Thread timerThread = new Thread(){
             public void run(){
                 try{
@@ -27,8 +28,16 @@ public class SplashScreen extends AppCompatActivity {
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }finally{
-                    Intent intent = new Intent(SplashScreen.this,Splash_Login.class);
-                    startActivity(intent);
+
+                    if(login_helper.getUserName()!=null) {
+                        Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                    else {
+                        Intent intent = new Intent(SplashScreen.this, Splash_Login.class);
+                        startActivity(intent);
+                    }
+
                 }
             }
         };

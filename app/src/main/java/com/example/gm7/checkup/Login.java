@@ -18,7 +18,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-
 import com.askerlap.emadahmed.checkup.R;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
