@@ -57,7 +57,7 @@
     <EditText
         android:hint="@string/shopPhone"
         android:maxLength="11"
-        android:inputType="numbergit"
+        android:inputType="number"
         android:ems="10"
         android:textStyle="normal|italic"
         android:padding="10dp"
@@ -74,6 +74,5 @@
         android:layout_height="wrap_content"
         android:gravity="center|left"
         android:hint="@string/salesDate"
-
         android:id="@+id/ed_date" />
 </LinearLayout>
