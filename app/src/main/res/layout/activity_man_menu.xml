@@ -1,57 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
      android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context="com.example.gm7.checkup.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/frame_back">
+
+    </ImageView>
+
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
-        android:layout_height="wrap_content">
+        android:padding="20dp">
         <Button
 
-            android:drawableLeft="@mipmap/shop_ic"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher"
             android:id="@+id/btn_shopping"
-            android:paddingTop="22sp"
-            android:text="Shops"
-
-            style="?android:attr/buttonBarButtonStyle"
-            android:gravity="start|center_vertical"/>
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:background="#d2d3d3"/>
-        <Button
-
-            android:drawableLeft="@mipmap/bill_ic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher"
+            android:drawableLeft="@drawable/shop"
+            android:fontFamily="serif"
+            android:gravity="start|center_vertical"
+            android:text=" Shops"
+            android:textAlignment="center"
+            android:textColor="@color/dgts__purple_pressed"
+            android:textSize="24sp"
+            android:textStyle="normal|bold|italic"
+            android:theme="@style/MyButton" />
+
+        <Button
+
             android:id="@+id/btn_report"
-            android:paddingTop="22sp"
-            android:text="Bill Report"
-
-            style="?android:attr/buttonBarButtonStyle"
-            android:gravity="start|center_vertical"/>
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:background="#d2d3d3"/>
-        <Button
-
-            android:drawableLeft="@mipmap/sales_ic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher"
+            android:drawableLeft="@drawable/check_book"
+            android:fontFamily="serif"
+            android:gravity="start|center_vertical"
+            android:text="Bill Report"
+            android:textAlignment="center"
+            android:textColor="@color/dgts__purple_pressed"
+            android:textSize="24sp"
+            android:textStyle="normal|bold|italic"
+            android:theme="@style/MyButton" />
+
+        <Button
+
             android:id="@+id/btn_salesItem"
-            android:paddingTop="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/shopping_bag"
+            android:fontFamily="serif"
+            android:gravity="start|center_vertical"
             android:text="Sales Items"
-
-            style="?android:attr/buttonBarButtonStyle"
-            android:gravity="start|center_vertical"/>
+            android:textAlignment="center"
+            android:textColor="@color/dgts__purple_pressed"
+            android:textSize="24sp"
+            android:textStyle="normal|bold|italic"
+            android:theme="@style/MyButton" />
     </LinearLayout>
-
-</ScrollView>
+</LinearLayout>
