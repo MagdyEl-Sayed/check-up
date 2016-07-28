@@ -4,94 +4,123 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
-    android:background="@drawable/background"
     android:orientation="vertical"
+    android:background="@color/border_color"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.gm7.checkup.Login"
     >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        >
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/logo"
+    />
 
-            android:orientation="vertical">
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+
+            >
             <com.facebook.login.widget.LoginButton
                 android:id="@+id/fb_login"
-                android:layout_marginTop="20dp"
-                android:textSize="23dp"
-                android:layout_gravity="center_horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="75dp" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="normal|bold"
+
+                />
             <com.twitter.sdk.android.core.identity.TwitterLoginButton
                 android:id="@+id/twitter_login_button"
-                android:layout_width="match_parent"
-                android:textSize="23dp"
                 android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                />
-
-            <TextView
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                android:textStyle="normal|bold" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+        <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="OR.."
-                android:layout_marginTop="10dp"
-                android:gravity="center"/>
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+            android:textAllCaps="true"
+            android:textStyle="normal|bold"
+            android:textAlignment="center"
+            android:textSize="24sp" />
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="20dp"
+            >
 
             <EditText
                 android:id="@+id/editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/group_top"
+                android:background="@color/base"
                 android:ems="10"
                 android:hint="UserName or Email"
                 android:inputType="textEmailAddress"
-                android:padding="10dp"
+                android:padding="15dp"
                 android:textSize="20sp"
-                android:textStyle="normal|italic">
+                android:textStyle="normal|italic"
+                android:drawableLeft="@mipmap/ic_person"
+                >
                 <requestFocus />
             </EditText>
-            <EditText
 
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/et2"
-                android:background="@drawable/group_row" />
             <EditText
-                android:id="@+id/et2"
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/editText"
-                android:background="@drawable/group_row" />             <EditText
                 android:id="@+id/editText2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/group_bottom"
+                android:layout_marginTop="10dp"
                 android:ems="10"
-                android:padding="10dp"
+                android:padding="15dp"
                 android:hint="Password"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:drawableLeft="@mipmap/ic_https"
+                android:background="@color/base"
+
+            />
             <LinearLayout
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="right"
+            android:gravity="center"
             android:orientation="horizontal"
             >
             <Button
                 android:id="@+id/btn"
-                android:layout_width="wrap_content"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:gravity="right"
-
+                android:gravity="center"
                 android:background="@drawable/sign_up"
                 android:text="SIGN IN"
                 android:textSize="18sp" />
@@ -100,4 +129,32 @@
 
 
 </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/your_string"
+            android:textAllCaps="true"
+            android:textSize="15sp"
+            android:textStyle="normal|bold"
+            android:id="@+id/signup"
+            />
+
+
+    </LinearLayout>
 </LinearLayout>

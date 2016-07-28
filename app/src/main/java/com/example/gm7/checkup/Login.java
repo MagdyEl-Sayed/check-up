@@ -3,11 +3,14 @@ package com.example.gm7.checkup;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.media.Image;
 import android.os.Bundle;
 
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
@@ -16,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.askerlap.emadahmed.checkup.R;
@@ -37,26 +41,42 @@ import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 
 public class Login extends AppCompatActivity {
     EditText txt1, txt2;
+    TextView txt;
 //    ImageView img;
     Button btn1;
     LoginButton faceelogin;
     TwitterLoginButton twitterlogin;
     LoginDataBaseAdapter loginDataBaseAdapter;
     private DB_shoppingHelper shopHelper;
-CallbackManager callbackManager;
+    CallbackManager callbackManager;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         facebookSDKInitialize();
         setContentView(R.layout.activity_main);
-        assert  getSupportActionBar() !=null;
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        assert getSupportActionBar() !=null;
+        getSupportActionBar().hide();
+        //
+        SpannableString content = new SpannableString("Content");
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+        //assert  getSupportActionBar() !=null;
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         loginDataBaseAdapter = new LoginDataBaseAdapter(this);
         shopHelper=new DB_shoppingHelper(this);
         loginDataBaseAdapter = loginDataBaseAdapter.open();
+        txt=(TextView)findViewById(R.id.signup);
+        txt.setPaintFlags(txt.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Login.this,SignUPActivity.class));
+            }
+        });
+        //
         txt1 = (EditText) findViewById(R.id.editText);
         txt2 = (EditText) findViewById(R.id.editText2);
+
 //        img = (ImageView) findViewById(R.id.errormessage);
         btn1 = (Button) findViewById(R.id.btn);
         faceelogin = (LoginButton) findViewById(R.id.fb_login);
@@ -135,6 +155,7 @@ CallbackManager callbackManager;
         });
 
     }
+
 protected void facebookSDKInitialize(){
     FacebookSdk.sdkInitialize(getApplicationContext());
     callbackManager=CallbackManager.Factory.create();
@@ -188,7 +209,7 @@ protected void facebookSDKInitialize(){
         // Close The Database
         loginDataBaseAdapter.close();
     }
-
+/*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 switch (item.getItemId()){
@@ -197,5 +218,5 @@ switch (item.getItemId()){
         return true;
 }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 }

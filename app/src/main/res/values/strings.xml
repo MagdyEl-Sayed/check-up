@@ -15,4 +15,6 @@
     <string name="itemPrice">Item Price</string>
     <string name="itemType">Item Type</string>
     <string name="salesDate">Date</string>
+    <string name="your_string"><u>SignUp</u></string>
+
 </resources>

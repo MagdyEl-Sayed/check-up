@@ -34,7 +34,7 @@ private LoginDataBaseAdapter login_helper;
                         startActivity(intent);
                     }
                     else {
-                        Intent intent = new Intent(SplashScreen.this, Splash_Login.class);
+                        Intent intent = new Intent(SplashScreen.this, Login.class);
                         startActivity(intent);
                     }
 
