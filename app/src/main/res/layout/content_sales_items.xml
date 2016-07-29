@@ -109,33 +109,8 @@
         android:textStyle="normal|italic"
 
         />
-    <TextView
-        android:id="@+id/ed_date"
-        style="?android:attr/buttonBarButtonStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center|left"
-        android:hint="@string/salesDate"
-        android:padding="10dp"
-        android:paddingTop="10sp"
-        android:textAlignment="gravity"
-        android:textStyle="bold" />
 
-            <Button
 
-                android:id="@+id/save"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:drawableLeft="@drawable/check_book"
-                android:fontFamily="serif"
-                android:gravity="start|center_vertical"
-                android:text=" Save"
-                android:textAlignment="center"
-                android:textColor="@color/com_facebook_button_background_color"
-                android:textSize="24sp"
-                android:textStyle="normal|bold|italic"
-                android:theme="@style/MyButton" />
 </LinearLayout>
     </ScrollView>
 </LinearLayout>
