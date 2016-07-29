@@ -28,7 +28,7 @@
     </style>
 
     <style name="MyButton" parent="Theme.AppCompat.Light">
-        <item name="colorControlHighlight">@color/Brown</item>
+        <item name="colorControlHighlight">@color/dgts__purple_pressed</item>
         <item name="colorButtonNormal">@color/base</item>
     </style>
 </resources>

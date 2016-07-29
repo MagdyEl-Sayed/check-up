@@ -4,75 +4,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_sales_items"
     android:layout_width="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.gm7.checkup.sales_items"
     tools:showIn="@layout/activity_sales_items">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/CornflowerBlue"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/notebook" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
     <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editstyle"
+        android:drawableLeft="@mipmap/ic_assignment"
+        android:ems="10"
         android:hint="@string/itemName"
         android:maxLength="15"
-        android:ems="10"
-        android:textStyle="normal|italic"
         android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:textStyle="normal|italic"
         />
     <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editstyle"
+        android:drawableLeft="@mipmap/ic_attach"
+        android:ems="10"
         android:hint="@string/itemPrice"
         android:inputType="numberDecimal"
-        android:ems="10"
-        android:textStyle="normal|italic"
         android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:textStyle="normal|italic"
+
         />
     <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editstyle"
+        android:drawableLeft="@mipmap/ic_shopping"
+        android:ems="10"
         android:hint="@string/itemType"
         android:maxLength="25"
-        android:ems="10"
-        android:textStyle="normal|italic"
         android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:textStyle="normal|italic"
+
         />
     <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editstyle"
+        android:drawableLeft="@mipmap/ic_store"
+        android:ems="10"
         android:hint="@string/shopName"
         android:maxLength="15"
-        android:ems="10"
-        android:textStyle="normal|italic"
         android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:textStyle="normal|italic"
+
         />
     <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editstyle"
+        android:drawableLeft="@mipmap/ic_place"
+        android:ems="10"
         android:hint="@string/shopAddress"
         android:maxLength="15"
-        android:ems="10"
-        android:textStyle="normal|italic"
         android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:textStyle="normal|italic"
+
         />
     <EditText
-        android:hint="@string/shopPhone"
-        android:maxLength="11"
-        android:inputType="number"
-        android:ems="10"
-        android:textStyle="normal|italic"
-        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editstyle"
+        android:drawableLeft="@mipmap/ic_phone"
+        android:ems="10"
+        android:hint="@string/shopPhone"
+        android:inputType="number"
+        android:maxLength="11"
+        android:padding="10dp"
+        android:textStyle="normal|italic"
+
         />
     <TextView
+        android:id="@+id/ed_date"
         style="?android:attr/buttonBarButtonStyle"
-        android:paddingTop="10sp"
-        android:textAlignment="gravity"
-        android:textStyle="bold"
         android:layout_width="match_parent"
-        android:padding="10dp"
         android:layout_height="wrap_content"
         android:gravity="center|left"
         android:hint="@string/salesDate"
-        android:id="@+id/ed_date" />
+        android:padding="10dp"
+        android:paddingTop="10sp"
+        android:textAlignment="gravity"
+        android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/check_book"
+                android:fontFamily="serif"
+                android:gravity="start|center_vertical"
+                android:text=" Save"
+                android:textAlignment="center"
+                android:textColor="@color/com_facebook_button_background_color"
+                android:textSize="24sp"
+                android:textStyle="normal|bold|italic"
+                android:theme="@style/MyButton" />
+</LinearLayout>
+    </ScrollView>
 </LinearLayout>
