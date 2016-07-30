@@ -1,24 +1,19 @@
 package com.example.gm7.checkup;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Paint;
-import android.media.Image;
 import android.os.Bundle;
 
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.MenuItem;
 import android.view.View;
 
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,7 +42,7 @@ public class Login extends AppCompatActivity {
     LoginButton faceelogin;
     TwitterLoginButton twitterlogin;
     LoginDataBaseAdapter loginDataBaseAdapter;
-    private DB_shoppingHelper shopHelper;
+    private DBShopsHelper shopHelper;
     CallbackManager callbackManager;
 
     @Override
@@ -63,7 +58,7 @@ public class Login extends AppCompatActivity {
         //assert  getSupportActionBar() !=null;
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         loginDataBaseAdapter = new LoginDataBaseAdapter(this);
-        shopHelper=new DB_shoppingHelper(this);
+        shopHelper=new DBShopsHelper(this);
         loginDataBaseAdapter = loginDataBaseAdapter.open();
         txt=(TextView)findViewById(R.id.signup);
         txt.setPaintFlags(txt.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
