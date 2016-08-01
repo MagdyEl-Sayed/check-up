@@ -23,7 +23,7 @@ private DBSalesItems SalesHelper;
     private android.os.Handler customHandler = new android.os.Handler();
     private Handler handler;
     private Runnable runnable;
-    TextView txt;
+    String strdate1;
     private static final String FORMAT = "%02d:%02d:%02d";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,6 @@ private DBSalesItems SalesHelper;
         setContentView(R.layout.activity_sales_items);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        txt=(TextView)findViewById(R.id.date);
         customHandler.postDelayed(updateTimerThread, 0);
         SalesHelper=new DBSalesItems(this);
         ShopsHelper=new DBShopsHelper(this);
@@ -52,7 +51,7 @@ private DBSalesItems SalesHelper;
                 } else {
                     ShopsHelper.getWritableDatabase();
                     SalesHelper.getWritableDatabase();
-                   SalesHelper.insertEntryItems(Double.parseDouble(itemPrice.getText().toString()), itemName.getText().toString(), "sex", shopName.getText().toString(),txt.getText().toString());
+                   SalesHelper.insertEntryItems(Double.parseDouble(itemPrice.getText().toString()), itemName.getText().toString(), "sex", shopName.getText().toString(),strdate1);
                     ShopsHelper.insertShop(shopName.getText().toString(), Integer.parseInt(shopPhone.getText().toString()),shopAddress.getText().toString(),null);
 
                     try {
@@ -76,7 +75,7 @@ private DBSalesItems SalesHelper;
             Calendar c1 = Calendar.getInstance();
 
             SimpleDateFormat sdf1 = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss");
-            String strdate1 = sdf1.format(c1.getTime());
+             strdate1 = sdf1.format(c1.getTime());
          /*   SimpleDateFormat sdf2 = new SimpleDateFormat("mm");
             String strdate2 = sdf2.format(c1.getTime());
             SimpleDateFormat sdf3 = new SimpleDateFormat("ss");
@@ -85,7 +84,7 @@ private DBSalesItems SalesHelper;
             String strdate4 = sdf4.format(c1.getTime());
             SimpleDateFormat sdf5 = new SimpleDateFormat("dd/MM/yyy");
             String strdate5 = sdf5.format(c1.getTime());*/
-            txt.setText(strdate1);
+           // txt.setText(strdate1);
             customHandler.postDelayed(this, 0);
         }
 
