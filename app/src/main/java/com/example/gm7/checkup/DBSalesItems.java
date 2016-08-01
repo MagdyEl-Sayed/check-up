@@ -2,6 +2,7 @@ package com.example.gm7.checkup;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -17,8 +18,10 @@ public class DBSalesItems extends SQLiteOpenHelper {
     private static final String CREATE_ITEM_TABLE ="create table "+ITEM_TABLE+"("+
             "item_id INTEGER PRIMARY KEY AUTOINCREMENT," +
             "item_price DECIMAL(19,5) NOT NULL ,"+
+
             "item_name VARCHAR(15) NOT NULL ," +
             "shop_name VARCHAR(15) NOT NULL ,"+
+            "date Date  ,"+
             "item_type VARCHAR(15) NOT NULL );";
     public DBSalesItems(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -40,8 +43,8 @@ public class DBSalesItems extends SQLiteOpenHelper {
 
     public boolean  insertEntryItems(double item_price, String item_name,String item_type,String shopName,String date) {
         SQLiteDatabase db=this.getWritableDatabase();
-        db=this.getWritableDatabase();
         ContentValues newValues = new ContentValues();
+
         newValues.put("item_price",item_price);
         newValues.put("item_name",item_name);
         newValues.put("item_type",item_type);
@@ -57,6 +60,17 @@ public class DBSalesItems extends SQLiteOpenHelper {
         String where = "item_name=?";
         int numberOFEntriesDeleted = db.delete(ITEM_TABLE, where, new String[]{item_name});
         return numberOFEntriesDeleted;
+    }
+    public String getItemDate(){
+        String password=null;
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select date from " + ITEM_TABLE , null);
+        cursor.moveToFirst();
+
+        if(cursor.moveToFirst()){
+            password=cursor.getString(cursor.getColumnIndex("date"));
+        }
+        return password;
     }
 
 

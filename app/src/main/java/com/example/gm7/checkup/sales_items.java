@@ -19,6 +19,7 @@ import java.util.Calendar;
 public class sales_items extends AppCompatActivity {
 private DBSalesItems SalesHelper;
     private DBShopsHelper ShopsHelper;
+    private LoginDataBaseAdapter loginHelper;
     private EditText itemName,itemType,itemPrice,shopName,shopPhone,shopAddress;
     private android.os.Handler customHandler = new android.os.Handler();
     private Handler handler;
@@ -34,10 +35,13 @@ private DBSalesItems SalesHelper;
         customHandler.postDelayed(updateTimerThread, 0);
         SalesHelper=new DBSalesItems(this);
         ShopsHelper=new DBShopsHelper(this);
+        loginHelper=new LoginDataBaseAdapter(this);
+        loginHelper.open();
         shopName=(EditText)findViewById(R.id.ed_shopname);
         shopAddress=(EditText)findViewById(R.id.ed_shopaddress);
         shopPhone=(EditText)findViewById(R.id.ed_shopPhone);
         itemName=(EditText)findViewById(R.id.ed_itemname);
+        itemType=(EditText)findViewById(R.id.ed_itemtype);
         itemPrice=(EditText)findViewById(R.id.ed_itemprice);
         shopAddress=(EditText)findViewById(R.id.ed_shopname);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -52,12 +56,12 @@ private DBSalesItems SalesHelper;
                     ShopsHelper.getWritableDatabase();
                     SalesHelper.getWritableDatabase();
                    SalesHelper.insertEntryItems(Double.parseDouble(itemPrice.getText().toString()), itemName.getText().toString(), "sex", shopName.getText().toString(),strdate1);
-                    ShopsHelper.insertShop(shopName.getText().toString(), Integer.parseInt(shopPhone.getText().toString()),shopAddress.getText().toString(),null);
-
+                    ShopsHelper.insertShop(shopName.getText().toString(),Integer.parseInt(shopPhone.getText().toString()),shopAddress.getText().toString(),strdate1);
+                    Snackbar.make(view, "Your Money now are safe to track", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
                     try {
                         Thread.sleep(1000);
-                        Snackbar.make(view, "Your Money now are safe to track", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
+
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

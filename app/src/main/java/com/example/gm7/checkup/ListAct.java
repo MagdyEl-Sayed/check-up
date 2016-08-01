@@ -14,17 +14,23 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.askerlap.emadahmed.checkup.R;
 
+import java.util.ArrayList;
+
 public class ListAct extends BaseAdapter{
     private final Context context;
-    private final String[] values;
+    private ArrayList<String> Addressvalues,PhonesValues,namesValues;
 
-    public ListAct(Context context, String[] values) {
+
+    public ListAct(Context context, ArrayList<String> values,ArrayList<String> values2,ArrayList<String> values3) {
 
         this.context = context;
-        this.values = values;
+        this.Addressvalues = values;
+        this.PhonesValues=values2;
+        this.namesValues=values3;
     }
 
     @Override
@@ -39,10 +45,10 @@ public class ListAct extends BaseAdapter{
         phone=(TextView)rowView.findViewById(R.id.tv_ShopPhone);
         lastVisit=(TextView)rowView.findViewById(R.id.tv_lastVisit);
         bill=(TextView)rowView.findViewById(R.id.tv_totalBill);
-        name.setText(R.string.shopName);
-        phone.setText(R.string.shopPhone);
-        address.setText(R.string.shopAddress);
-        lastVisit.setText(R.string.lastVisit);
+        name.setText(context.getResources().getString(R.string.shopName)+" "+namesValues.get(position));
+        phone.setText(context.getResources().getString(R.string.shopPhone)+" "+PhonesValues.get(position)) ;
+        address.setText(context.getResources().getString(R.string.shopAddress)+" "+Addressvalues.get(position));
+        lastVisit.setText(context.getResources().getString(R.string.lastVisit)+" ");
         bill.setText(R.string.totalBill);
 
         return rowView;
@@ -50,7 +56,8 @@ public class ListAct extends BaseAdapter{
 
     @Override
     public int getCount() {
-        return values.length;
+        return PhonesValues.size();
+
     }
 
     @Override

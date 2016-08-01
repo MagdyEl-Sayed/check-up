@@ -35,9 +35,10 @@ public class DBShopsHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + SHOP_TABLE);
         onCreate(db);
     }
-    public boolean  insertShop(String shop_name, int shop_phone, String shop_address, String shop_last_visit) {
+    public boolean  insertShop( String shop_name, int shop_phone, String shop_address, String shop_last_visit) {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues newValues = new ContentValues();
+
         newValues.put("shop_name",shop_name);
         newValues.put("shop_phone",shop_phone);
         newValues.put("shop_address",shop_address);
@@ -59,11 +60,11 @@ public class DBShopsHelper extends SQLiteOpenHelper {
         db.update("shop", updatedValues, where, new String[]{shop_last_visit});
         return true;
     }
-public ArrayList<String > getShopAddress(String shopname){
+public ArrayList<String > getShopAddress(){
     SQLiteDatabase db=this.getWritableDatabase();
 
     ArrayList<String>shopAddresses=new ArrayList<String>();
-    Cursor cursor=db.rawQuery("SELECT  * FROM "+SHOP_TABLE+" where shop_name= '"+shopname+"'",null);
+    Cursor cursor=db.rawQuery("SELECT shop_address FROM "+SHOP_TABLE,null);
     cursor.moveToFirst();
     while(!cursor.isAfterLast()){
         shopAddresses.add(cursor.getString(cursor.getColumnIndex("shop_address")));
@@ -71,10 +72,27 @@ public ArrayList<String > getShopAddress(String shopname){
     }
     return shopAddresses;
 }
-    /*public ArrayList<String> getShopPhones(String shopname){
+    public ArrayList<String> getShopPhones(){
+        SQLiteDatabase db=this.getWritableDatabase();
 
+        ArrayList<String>shopphones=new ArrayList<String>();
+        Cursor cursor=db.rawQuery("SELECT  * FROM "+SHOP_TABLE ,null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            shopphones.add(cursor.getString(cursor.getColumnIndex("shop_phone")));
+            cursor.moveToNext();
+        }
+        return shopphones;
     }
-    public ArrayList<String> getShopLastVisit(String shopname){
+    public ArrayList<String> getShopNames(){
+        SQLiteDatabase db=this.getWritableDatabase();
 
-    }*/
+        ArrayList<String>shopNames=new ArrayList<String>();
+        Cursor cursor=db.rawQuery("SELECT  * FROM "+SHOP_TABLE ,null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            shopNames.add(cursor.getString(cursor.getColumnIndex("shop_name")));
+            cursor.moveToNext();
+        }
+        return shopNames;    }
 }

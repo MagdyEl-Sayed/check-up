@@ -22,15 +22,29 @@ import java.util.ArrayList;
 
 public class Shops extends AppCompatActivity {
 private ListView list_layout;
-    static final String[] Android =
-            new String[] { "item1", "item2", "item3", "item4"};
+   ArrayList<String> shopAddresses,shop_Phones,shopNames;
+    DBShopsHelper shopsHelper;
+    LoginDataBaseAdapter loginHelper;
+    DBSalesItems salesHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shops);
       //  setContentView(R.layout.activity_shops);
+        shopsHelper=new DBShopsHelper(this);
+        salesHelper=new DBSalesItems(this);
+
+        loginHelper=new LoginDataBaseAdapter(this);
+        loginHelper.open();
+
+        shopAddresses=new ArrayList<>();
+        shop_Phones=new ArrayList<>();
+        shopNames=new ArrayList<>();
+        shopAddresses=shopsHelper.getShopAddress();
+        shop_Phones=shopsHelper.getShopPhones();
+        shopNames=shopsHelper.getShopNames();
         list_layout=(ListView)findViewById(R.id.activity_shops);
-        list_layout.setAdapter(new ListAct(this,Android));
+        list_layout.setAdapter(new ListAct(this,shopAddresses,shop_Phones ,shopNames));
 
 //        setListAdapter(new ListAct(this, Android));
 

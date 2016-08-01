@@ -20,7 +20,7 @@ android {
     buildToolsVersion "24.0.0"
     defaultConfig {
 
-        applicationId "com.example.gm7.checkup"
+        applicationId "com.askerlap.emadahmed.checkup"
         minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
@@ -51,6 +51,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha4'
     compile 'com.android.support:design:24.0.0'
-    compile 'com.android.support:appcompat-v7:X.X.X' // where X.X.X version
+
     testCompile 'junit:junit:4.12'
 }
