@@ -114,6 +114,13 @@
         android:textStyle="normal|italic"
 
         />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date"
+                android:text="Hello"
+                android:textSize="50dp"
+                />
 
 
 </LinearLayout>

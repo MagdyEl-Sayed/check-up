@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 /**
  * Created by GM7 on 27/07/2016.
@@ -31,10 +32,13 @@ public class DBSalesItems extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + ITEM_TABLE);
+        String upgradeQuery = "ALTER TABLE items ADD COLUMN date TEXT NOT NULL";
+        if (oldVersion == 1 && newVersion == 2)
+            db.execSQL(upgradeQuery);
         onCreate(db);
     }
 
-    public boolean  insertEntryItems(double item_price, String item_name,String item_type,String shopName) {
+    public boolean  insertEntryItems(double item_price, String item_name,String item_type,String shopName,String date) {
         SQLiteDatabase db=this.getWritableDatabase();
         db=this.getWritableDatabase();
         ContentValues newValues = new ContentValues();
@@ -42,6 +46,8 @@ public class DBSalesItems extends SQLiteOpenHelper {
         newValues.put("item_name",item_name);
         newValues.put("item_type",item_type);
         newValues.put("shop_name",shopName);
+        newValues.put("date",date);
+
          db.insert(ITEM_TABLE, null, newValues);
         return true;
     }
