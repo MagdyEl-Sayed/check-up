@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 public class Shops extends AppCompatActivity {
 private ListView list_layout;
-   ArrayList<String> shopAddresses,shop_Phones,shopNames;
+   ArrayList<String> shopAddresses,shop_Phones,shopNames,shopLastvisit;
     DBShopsHelper shopsHelper;
     LoginDataBaseAdapter loginHelper;
     DBSalesItems salesHelper;
@@ -36,15 +36,16 @@ private ListView list_layout;
 
         loginHelper=new LoginDataBaseAdapter(this);
         loginHelper.open();
-
+        shopLastvisit=new ArrayList<>();
         shopAddresses=new ArrayList<>();
         shop_Phones=new ArrayList<>();
         shopNames=new ArrayList<>();
-        shopAddresses=shopsHelper.getShopAddress();
+        shopAddresses=shopsHelper.getShopAddress(loginHelper.getUserName());
         shop_Phones=shopsHelper.getShopPhones();
         shopNames=shopsHelper.getShopNames();
+        shopLastvisit=shopsHelper.getLasttVisit();
         list_layout=(ListView)findViewById(R.id.activity_shops);
-        list_layout.setAdapter(new ListAct(this,shopAddresses,shop_Phones ,shopNames));
+        list_layout.setAdapter(new ListAct(this,shopAddresses,shop_Phones ,shopNames,shopLastvisit));
 
 //        setListAdapter(new ListAct(this, Android));
 

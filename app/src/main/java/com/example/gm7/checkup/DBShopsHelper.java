@@ -35,15 +35,15 @@ public class DBShopsHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + SHOP_TABLE);
         onCreate(db);
     }
-    public boolean  insertShop( String shop_name, int shop_phone, String shop_address, String shop_last_visit) {
+    public boolean  insertShop( String userName, String shop_name, int shop_phone, String shop_address, String shop_last_visit) {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues newValues = new ContentValues();
-
+        newValues.put("user_name",userName);
         newValues.put("shop_name",shop_name);
         newValues.put("shop_phone",shop_phone);
         newValues.put("shop_address",shop_address);
         newValues.put("shop_last_visit",shop_last_visit);
-        db.insert("shop", null, newValues);
+        db.insert(SHOP_TABLE, null, newValues);
         return true;
     }
     public int deleteShop(String shop_name) {
@@ -60,11 +60,11 @@ public class DBShopsHelper extends SQLiteOpenHelper {
         db.update("shop", updatedValues, where, new String[]{shop_last_visit});
         return true;
     }
-public ArrayList<String > getShopAddress(){
+public ArrayList<String > getShopAddress( String userName){
     SQLiteDatabase db=this.getWritableDatabase();
 
     ArrayList<String>shopAddresses=new ArrayList<String>();
-    Cursor cursor=db.rawQuery("SELECT shop_address FROM "+SHOP_TABLE,null);
+    Cursor cursor=db.rawQuery("SELECT * FROM "+SHOP_TABLE+ " where user_name = '"+ userName+"'",null);
     cursor.moveToFirst();
     while(!cursor.isAfterLast()){
         shopAddresses.add(cursor.getString(cursor.getColumnIndex("shop_address")));
@@ -92,6 +92,17 @@ public ArrayList<String > getShopAddress(){
         cursor.moveToFirst();
         while(!cursor.isAfterLast()){
             shopNames.add(cursor.getString(cursor.getColumnIndex("shop_name")));
+            cursor.moveToNext();
+        }
+        return shopNames;    }
+    public ArrayList<String> getLasttVisit(){
+        SQLiteDatabase db=this.getWritableDatabase();
+
+        ArrayList<String>shopNames=new ArrayList<String>();
+        Cursor cursor=db.rawQuery("SELECT  * FROM "+SHOP_TABLE ,null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            shopNames.add(cursor.getString(cursor.getColumnIndex("shop_last_visit")));
             cursor.moveToNext();
         }
         return shopNames;    }

@@ -18,7 +18,7 @@ public class DBSalesItems extends SQLiteOpenHelper {
     private static final String CREATE_ITEM_TABLE ="create table "+ITEM_TABLE+"("+
             "item_id INTEGER PRIMARY KEY AUTOINCREMENT," +
             "item_price DECIMAL(19,5) NOT NULL ,"+
-
+            "user_name text not null ,"+
             "item_name VARCHAR(15) NOT NULL ," +
             "shop_name VARCHAR(15) NOT NULL ,"+
             "date Date  ,"+
@@ -41,10 +41,10 @@ public class DBSalesItems extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean  insertEntryItems(double item_price, String item_name,String item_type,String shopName,String date) {
+    public boolean  insertEntryItems(String userName,double item_price, String item_name,String item_type,String shopName,String date) {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues newValues = new ContentValues();
-
+        newValues.put("user_name",userName);
         newValues.put("item_price",item_price);
         newValues.put("item_name",item_name);
         newValues.put("item_type",item_type);

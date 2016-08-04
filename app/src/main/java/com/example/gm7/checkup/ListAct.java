@@ -22,15 +22,16 @@ import java.util.ArrayList;
 
 public class ListAct extends BaseAdapter{
     private final Context context;
-    private ArrayList<String> Addressvalues,PhonesValues,namesValues;
+    private ArrayList<String> Addressvalues,PhonesValues,namesValues,lastvisitValue;
 
 
-    public ListAct(Context context, ArrayList<String> values,ArrayList<String> values2,ArrayList<String> values3) {
+    public ListAct(Context context, ArrayList<String> values,ArrayList<String> values2,ArrayList<String> values3 ,ArrayList<String> value4) {
 
         this.context = context;
         this.Addressvalues = values;
         this.PhonesValues=values2;
         this.namesValues=values3;
+        this.lastvisitValue=value4;
     }
 
     @Override
@@ -48,7 +49,7 @@ public class ListAct extends BaseAdapter{
         name.setText(context.getResources().getString(R.string.shopName)+" "+namesValues.get(position));
         phone.setText(context.getResources().getString(R.string.shopPhone)+" "+PhonesValues.get(position)) ;
         address.setText(context.getResources().getString(R.string.shopAddress)+" "+Addressvalues.get(position));
-        lastVisit.setText(context.getResources().getString(R.string.lastVisit)+" ");
+        lastVisit.setText(context.getResources().getString(R.string.lastVisit)+" "+lastvisitValue.get(position));
         bill.setText(R.string.totalBill);
 
         return rowView;

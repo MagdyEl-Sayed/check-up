@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.askerlap.emadahmed.checkup.R;
 
@@ -30,7 +31,7 @@ private DBSalesItems SalesHelper;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales_items);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         customHandler.postDelayed(updateTimerThread, 0);
         SalesHelper=new DBSalesItems(this);
@@ -48,15 +49,18 @@ private DBSalesItems SalesHelper;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(itemPrice.getText().toString().isEmpty()|| itemName.getText().toString().isEmpty()||
-                        itemType.getText().toString().isEmpty()|| shopName.getText().toString().isEmpty()||shopPhone.getText().toString().isEmpty()){
+               String iName=itemName.getText().toString(),iType= itemType.getText().toString(),sName= shopName.getText().toString(),sAddress=shopAddress.getText().toString();
+                int sPhone=Integer.parseInt(shopPhone.getText().toString()); double iPrice=Double.parseDouble(itemPrice.getText().toString());
+                if(iName.isEmpty()|| iType.isEmpty()||
+                       sName.isEmpty()||sAddress.isEmpty()||(sPhone+"").isEmpty()){
                     Snackbar.make(view,"please fill all boxes above ",Snackbar.LENGTH_LONG).setAction("Action",null)
                             .show();
                 } else {
                     ShopsHelper.getWritableDatabase();
                     SalesHelper.getWritableDatabase();
-                   SalesHelper.insertEntryItems(Double.parseDouble(itemPrice.getText().toString()), itemName.getText().toString(), "sex", shopName.getText().toString(),strdate1);
-                    ShopsHelper.insertShop(shopName.getText().toString(),Integer.parseInt(shopPhone.getText().toString()),shopAddress.getText().toString(),strdate1);
+                   SalesHelper.insertEntryItems(loginHelper.getUserName(),iPrice,iName,iType,sName,strdate1);
+
+                    ShopsHelper.insertShop(loginHelper.getUserName(),sName,sPhone,sAddress,strdate1);
                     Snackbar.make(view, "Your Money now are safe to track", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                     try {
@@ -65,6 +69,7 @@ private DBSalesItems SalesHelper;
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    Toast.makeText(getApplicationContext(),sAddress,Toast.LENGTH_LONG).show();
                     finish();
                 }
             }

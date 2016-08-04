@@ -109,7 +109,7 @@
         android:drawableLeft="@mipmap/ic_phone"
         android:ems="10"
         android:hint="@string/shopPhone"
-        android:inputType="number"
+        android:inputType="phone"
         android:maxLength="11"
         android:padding="10dp"
         android:textStyle="normal|italic"
