@@ -98,7 +98,7 @@ int counter=0;
 
                             progressDialog.dismiss();
                         }
-                    }, 3000);
+                    }, size*1000);
             for(int i=0;i<size;i++){
                 shopsHelper.deleteDate(Names.get(i));
                 salesHelper.deleteDate(Names.get(i));
