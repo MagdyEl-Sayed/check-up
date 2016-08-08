@@ -96,5 +96,16 @@ public ArrayList<String > getShopAddress( String userName){
             cursor.moveToNext();
         }
         return shopNames;    }
+    public ArrayList<String> getshopName( ){
+        SQLiteDatabase db=this.getWritableDatabase();
 
+        ArrayList<String>shopNames=new ArrayList<String>();
+        Cursor cursor=db.rawQuery("SELECT  * FROM "+SHOP_TABLE ,null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            shopNames.add(cursor.getString(cursor.getColumnIndex("shop_name")));
+            cursor.moveToNext();
+        }
+        return shopNames;
+    }
 }

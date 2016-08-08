@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 int counter=0;
     Animation fade_in, fade_out;
     ViewFlipper viewFlipper;
-    private Button shopping,sales_items;
+    private Button billDetails,shopDetails,sales_items;
 
     //Fuck u _!_
     @Override
@@ -33,9 +33,10 @@ int counter=0;
         viewFlipper.setOutAnimation(fade_out);
 //sets auto flipping
         viewFlipper.setAutoStart(true);
-        viewFlipper.setFlipInterval(1500);
+        viewFlipper.setFlipInterval(3000);
         viewFlipper.startFlipping();
-        shopping=(Button) findViewById(R.id.btn_shopping);
+        billDetails=(Button) findViewById(R.id.btn_report);
+        shopDetails=(Button)findViewById(R.id.btn_shopping);
         sales_items=(Button)findViewById(R.id.btn_salesItem);
         sales_items.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,10 +44,16 @@ int counter=0;
                 startActivity(new Intent(MainActivity.this,sales_items.class));
             }
         });
-        shopping.setOnClickListener(new View.OnClickListener() {
+        billDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,BillDetails.class));
+            }
+        });
+        shopDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,ShopDetails.class));
             }
         });
 

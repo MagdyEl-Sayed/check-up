@@ -37,47 +37,6 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/frame2" />
 
-            <ImageView
-                android:id="@+id/bckgrndImageView6"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/frame3" />
-
-            <ImageView
-                android:id="@+id/bckgrndImageView5"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/picture4" />
-
-            <ImageView
-                android:id="@+id/bckgrndImageView4"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/picture5" />
-
-            <ImageView
-                android:id="@+id/bckgrndImageView3"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/picture6" />
-
-            <ImageView
-                android:id="@+id/bckgrndImageView2"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/picture7" />
-
-            <ImageView
-                android:id="@+id/bckgrndImageView1"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/picture8" />
         </ViewFlipper>
     </LinearLayout>
 

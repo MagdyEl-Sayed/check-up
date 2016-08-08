@@ -49,7 +49,7 @@ public class ListAct extends BaseAdapter{
 
         salesHelper=new DBSalesItems(context);
         namesValues=new DBShopsHelper(context).getShopNames(DateValue.get(position));
-       itemNamesValue= salesHelper.getItems(namesValues.get(position-1));
+       itemNamesValue= salesHelper.getItems(namesValues.get(position));
         SIZE=itemNamesValue.size();
         View rowView = inflater.inflate(R.layout.dynamic_custom_layout, parent, false);
         LinearLayout parentLayout=(LinearLayout)rowView.findViewById(R.id.parent_layout);
