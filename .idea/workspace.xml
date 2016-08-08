@@ -14,7 +14,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
@@ -22,11 +21,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/Login.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/LoginDataBaseAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/LoginDataBaseAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/SplashScreen.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/SplashScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_main__menu.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_main__menu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBSalesItems.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBSalesItems.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBShopsHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBShopsHelper.java" />
     </list>
     <ignored path="check-up.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,7 +59,7 @@
       <file leaf-file-name="sales_items.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/sales_items.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
+            <state relative-caret-position="1065">
               <caret line="86" column="68" selection-start-line="86" selection-start-column="68" selection-end-line="86" selection-end-column="68" />
               <folding />
             </state>
@@ -82,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginDataBaseAdapter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginDataBaseAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/LoginDataBaseAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="161" column="45" selection-start-line="161" selection-start-column="45" selection-end-line="161" selection-end-column="45" />
+            <state relative-caret-position="2295">
+              <caret line="164" column="30" selection-start-line="164" selection-start-column="30" selection-end-line="164" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -95,8 +92,8 @@
       <file leaf-file-name="SplashScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/SplashScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="23" column="101" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="101" />
+            <state relative-caret-position="180">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -105,8 +102,8 @@
       <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="62" column="67" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
+            <state relative-caret-position="510">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -115,8 +112,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
+            <state relative-caret-position="975">
+              <caret line="77" column="68" selection-start-line="77" selection-start-column="68" selection-end-line="77" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -125,11 +122,9 @@
       <file leaf-file-name="ListAct.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/ListAct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
+            <state relative-caret-position="780">
               <caret line="68" column="104" selection-start-line="68" selection-start-column="104" selection-end-line="68" selection-end-column="104" />
-              <folding>
-                <element signature="e#2535#2587#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,7 +132,7 @@
       <file leaf-file-name="BillDetails.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/BillDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
+            <state relative-caret-position="405">
               <caret line="45" column="59" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
               <folding />
             </state>
@@ -147,18 +142,18 @@
       <file leaf-file-name="DBShopsHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBShopsHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state relative-caret-position="589">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBSalesItems.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBSalesItems.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBSalesItems.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state relative-caret-position="664">
+              <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -2107,16 +2102,16 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_man_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_shop_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/ShopDetails.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBShopsHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/BillDetails.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBSalesItems.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/ListAct.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/sales_items.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main__menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/SplashScreen.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/Login.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/LoginDataBaseAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/Login.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/SplashScreen.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBShopsHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBSalesItems.java" />
       </list>
     </option>
   </component>
@@ -2158,82 +2153,9 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="check-up" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="check-up" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="check-up" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="check-up" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="checkup" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="check-up" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -2354,9 +2276,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2718,9 +2639,8 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673716" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -2735,6 +2655,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673716" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2754,6 +2675,33 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/sales_items.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main__menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/LoginDataBaseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="164" column="30" selection-start-line="164" selection-start-column="30" selection-end-line="164" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_shop_details.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2761,7 +2709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2772,7 +2719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="29" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2780,9 +2726,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#2535#2587#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2801,7 +2745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2828,7 +2771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2847,7 +2789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2858,7 +2799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="29" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2866,9 +2806,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="53" column="73" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
-          <folding>
-            <element signature="e#2535#2587#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2876,9 +2814,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2894,7 +2830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2905,7 +2840,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2913,9 +2847,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2926,7 +2858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2934,7 +2865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2945,7 +2875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2953,7 +2882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2977,7 +2905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2998,7 +2925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3009,7 +2935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3020,7 +2945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
           <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3032,43 +2956,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBShopsHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/BillDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="45" column="59" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBSalesItems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/ListAct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="68" column="104" selection-start-line="68" selection-start-column="104" selection-end-line="68" selection-end-column="104" />
-          <folding>
-            <element signature="e#2535#2587#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/sales_items.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
+        <state relative-caret-position="1065">
           <caret line="86" column="68" selection-start-line="86" selection-start-column="68" selection-end-line="86" selection-end-column="68" />
           <folding />
         </state>
@@ -3089,38 +2979,69 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-960">
           <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/LoginDataBaseAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="62" column="67" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
+        <state relative-caret-position="2295">
+          <caret line="164" column="30" selection-start-line="164" selection-start-column="30" selection-end-line="164" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/SplashScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="23" column="101" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="101" />
+        <state relative-caret-position="180">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/LoginDataBaseAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="161" column="45" selection-start-line="161" selection-start-column="45" selection-end-line="161" selection-end-column="45" />
+        <state relative-caret-position="510">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="77" column="68" selection-start-line="77" selection-start-column="68" selection-end-line="77" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/ListAct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="68" column="104" selection-start-line="68" selection-start-column="104" selection-end-line="68" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/BillDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="45" column="59" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBShopsHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/gm7/checkup/DBSalesItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
           <folding />
         </state>
       </provider>

@@ -56,12 +56,12 @@ public class DBSalesItems extends SQLiteOpenHelper {
          db.insert(ITEM_TABLE, null, newValues);
         return true;
     }
-
-    public int deleteEntry(String item_name) {
+    public Integer deleteDate(String name){
         SQLiteDatabase db=this.getWritableDatabase();
-        String where = "item_name=?";
-        int numberOFEntriesDeleted = db.delete(ITEM_TABLE, where, new String[]{item_name});
-        return numberOFEntriesDeleted;
+
+        db.delete(ITEM_TABLE, "shop_name = ?", new String[]{name});
+        return 0;
+
     }
  //select items which have the same date and from same shop
     public ArrayList<String> getItems(String shopName ){

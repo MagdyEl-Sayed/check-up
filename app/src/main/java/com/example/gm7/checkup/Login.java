@@ -107,7 +107,7 @@ public class Login extends AppCompatActivity {
                 // fetch the Password form database for respective user name
                 String storedPassword = loginDataBaseAdapter.getSinlgeEntry(userName);
                 String storedPassword1 = loginDataBaseAdapter.getSinlgeEnt(userName);
-                Toast.makeText(getBaseContext(),storedPassword,Toast.LENGTH_SHORT).show();
+
                 //
                 if (txt1.getText().toString().isEmpty()) {
                     txt1.setError("UserName Should not be blank");
@@ -120,8 +120,7 @@ public class Login extends AppCompatActivity {
 
                 // check if the Stored password matches with  Password entered by user
                 else if (password.equals(storedPassword) || password.equals(storedPassword1)) {
-                    // progressDialog = ProgressDialog.show(Login.this,"Please wait", "Sending mail", true, false);
-                    // progressDialog = ProgressDialog.show(Login.this, "", "Loading...");
+                   loginDataBaseAdapter.updateFlag("true",loginDataBaseAdapter.getUserName());
                     final ProgressDialog progressDialog = new ProgressDialog(Login.this);
                     progressDialog.setIndeterminate(true);
                     progressDialog.setMessage("Authenticating...");

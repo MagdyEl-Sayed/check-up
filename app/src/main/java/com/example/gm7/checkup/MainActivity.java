@@ -1,5 +1,6 @@
 package com.example.gm7.checkup;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,11 +14,16 @@ import android.widget.Button;
 import android.widget.ViewFlipper;
 
 import com.askerlap.emadahmed.checkup.R;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 int counter=0;
     Animation fade_in, fade_out;
     ViewFlipper viewFlipper;
     LoginDataBaseAdapter loginHelper;
+    DBShopsHelper shopsHelper;
+    DBSalesItems salesHelper;
     private Button billDetails,shopDetails,sales_items;
 
     //Fuck u _!_
@@ -26,6 +32,8 @@ int counter=0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_man_menu   );
         loginHelper=new LoginDataBaseAdapter(this);
+        shopsHelper=new DBShopsHelper(this);
+        salesHelper=new DBSalesItems(this);
         loginHelper.open();
         viewFlipper = (ViewFlipper) this.findViewById(R.id.bckgrndViewFlipper1);
         fade_in = AnimationUtils.loadAnimation(this,
@@ -77,6 +85,25 @@ int counter=0;
         } else if(id==R.id.action_logout){
             loginHelper.updateFlag("false",loginHelper.getUserName());
             startActivity(new Intent(MainActivity.this,Login.class));
+        } else if (id==R.id.action_delete_data){
+            int size=shopsHelper.getshopName().size();
+            ArrayList<String> Names=shopsHelper.getshopName();
+            final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+            progressDialog.setIndeterminate(true);
+            progressDialog.setMessage("Authenticating...");
+            progressDialog.show();
+            new android.os.Handler().postDelayed(
+                    new Runnable() {
+                        public void run() {
+
+                            progressDialog.dismiss();
+                        }
+                    }, 3000);
+            for(int i=0;i<size;i++){
+                shopsHelper.deleteDate(Names.get(i));
+                salesHelper.deleteDate(Names.get(i));
+            }
+            return true;
         }
         return true;
     }

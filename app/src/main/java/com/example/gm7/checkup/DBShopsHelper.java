@@ -46,11 +46,12 @@ public class DBShopsHelper extends SQLiteOpenHelper {
         db.insert(SHOP_TABLE, null, newValues);
         return true;
     }
-    public int deleteShop(String shop_name) {
+    public Integer deleteDate(String name){
         SQLiteDatabase db=this.getWritableDatabase();
-        String where = "shop_name=?";
-        int numberOFEntriesDeleted = db.delete("shop", where, new String[]{shop_name});
-        return numberOFEntriesDeleted;
+        db.delete(SHOP_TABLE,"shop_name = ?",new String []{name});
+
+        return 0;
+
     }
 
 public ArrayList<String > getShopAddress( String userName){
