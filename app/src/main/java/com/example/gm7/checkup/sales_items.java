@@ -60,7 +60,7 @@ private DBSalesItems SalesHelper;
                     SalesHelper.getWritableDatabase();
                    SalesHelper.insertEntryItems(loginHelper.getUserName(),iPrice,iName,iType,sName,strdate1);
 
-                    ShopsHelper.insertShop(loginHelper.getUserName(),sName,sPhone,sAddress,strdate1);
+                    ShopsHelper.insertShop(loginHelper.getUserName(),sName,sPhone,sAddress);
 
                     try {
                         Snackbar.make(view, "Your Money now are safe to track", Snackbar.LENGTH_LONG)
@@ -84,17 +84,9 @@ private DBSalesItems SalesHelper;
             ///
             Calendar c1 = Calendar.getInstance();
 
-            SimpleDateFormat sdf1 = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss");
+            SimpleDateFormat sdf1 = new SimpleDateFormat("d MMM yyyy");
              strdate1 = sdf1.format(c1.getTime());
-         /*   SimpleDateFormat sdf2 = new SimpleDateFormat("mm");
-            String strdate2 = sdf2.format(c1.getTime());
-            SimpleDateFormat sdf3 = new SimpleDateFormat("ss");
-            String strdate3 = sdf3.format(c1.getTime());
-            SimpleDateFormat sdf4 = new SimpleDateFormat("a");
-            String strdate4 = sdf4.format(c1.getTime());
-            SimpleDateFormat sdf5 = new SimpleDateFormat("dd/MM/yyy");
-            String strdate5 = sdf5.format(c1.getTime());*/
-           // txt.setText(strdate1);
+
             customHandler.postDelayed(this, 0);
         }
 

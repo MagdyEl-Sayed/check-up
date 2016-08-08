@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.askerlap.emadahmed.checkup.R;
 
@@ -46,6 +47,10 @@ private ListView list;
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==R.id.action_search){
+            Toast.makeText(getApplicationContext(),"Clicked",Toast.LENGTH_LONG).show();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -79,10 +84,11 @@ private ListView list;
             LayoutInflater inflater = (LayoutInflater) mcontext
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View myView=inflater.inflate(R.layout.custom_shop_layout,viewGroup,false);
-            TextView shopName,Shop_phone;
+            TextView shopName,Shop_phone,test;
             shopName=(TextView)myView.findViewById(R.id.txt_cust_shopname);
             Shop_phone=(TextView)myView.findViewById(R.id.txt_cust_shopphone);
-
+            test=(TextView)myView.findViewById(R.id.txt_cust_test);
+            test.setText(new DBSalesItems(mcontext).getItems(names.get(i)).size()+"");
             Shop_phone.setText("+20"+shopNames.get(i));
            shopName.setText(NAMES.get(i));
             return myView;

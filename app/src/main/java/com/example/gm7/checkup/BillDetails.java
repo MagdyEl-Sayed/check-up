@@ -43,8 +43,8 @@ private ListView list_layout;
         itemNames=new ArrayList<>();
         shopAddresses=shopsHelper.getShopAddress(loginHelper.getUserName());
         shop_Phones=shopsHelper.getShopPhones();
-        dates=salesHelper.getAllDates(loginHelper.getUserName());
-
+        dates=salesHelper.getDate(loginHelper.getUserName());
+        shopnames=shopsHelper.getshopName();
         list_layout=(ListView)findViewById(R.id.activity_shops);
         list_layout.setAdapter(new ListAct(this,shopAddresses,shop_Phones ,dates,shopnames,itemNames));
 

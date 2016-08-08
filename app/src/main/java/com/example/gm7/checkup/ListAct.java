@@ -48,7 +48,7 @@ public class ListAct extends BaseAdapter{
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         salesHelper=new DBSalesItems(context);
-        namesValues=new DBShopsHelper(context).getShopNames(DateValue.get(position));
+
        itemNamesValue= salesHelper.getItems(namesValues.get(position));
         SIZE=itemNamesValue.size();
         View rowView = inflater.inflate(R.layout.dynamic_custom_layout, parent, false);
@@ -64,9 +64,9 @@ public class ListAct extends BaseAdapter{
         }
         fixedView[0].setGravity(Gravity.CENTER);
         fixedView[0].setPadding(0,10,0,0);
-        fixedView[0].setText(new DBShopsHelper(context).getShopNames(DateValue.get(position)).toString());
+        fixedView[0].setText(new DBShopsHelper(context).getshopName().get(position));
         fixedView[1].setPadding(10,0,0,0);
-        fixedView[1].setText(context.getResources().getString(R.string.bill_date)+DateValue.get(position).substring(6));
+        fixedView[1].setText(context.getResources().getString(R.string.bill_date)+DateValue.get(position));
         childsLayout[position]=new LinearLayout(context);
         childsLayout[position].setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         childsLayout[position].setOrientation(LinearLayout.VERTICAL);
@@ -80,7 +80,7 @@ public class ListAct extends BaseAdapter{
             itemsDetails[i]=new TextView(context);
             itemsDetails[i].setTextSize(17);
             itemsDetails[i].setTextColor(Color.BLACK);
-            itemsDetails[i].setText(itemNamesValue.get(i));
+            itemsDetails[i].setText(i+" "+itemNamesValue.get(i));
             ItemDetailsLayout[position].addView(itemsDetails[i]);
 
         }

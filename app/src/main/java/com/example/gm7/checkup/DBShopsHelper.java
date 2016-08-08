@@ -20,8 +20,8 @@ public class DBShopsHelper extends SQLiteOpenHelper {
             "user_name TEXT NOT NULL ,"+
             "shop_name text NOT NULL ," +
             "shop_phone INTEGER NOT NULL ,"+
-            "shop_address text NOt NULL ,"+
-            "shop_last_visit text "+
+            "shop_address text NOt NULL "+
+
                         ");";
     public DBShopsHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -35,14 +35,14 @@ public class DBShopsHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + SHOP_TABLE);
         onCreate(db);
     }
-    public boolean  insertShop( String userName, String shop_name, int shop_phone, String shop_address, String shop_last_visit) {
+    public boolean  insertShop( String userName, String shop_name, int shop_phone, String shop_address) {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues newValues = new ContentValues();
         newValues.put("user_name",userName);
         newValues.put("shop_name",shop_name);
         newValues.put("shop_phone",shop_phone);
         newValues.put("shop_address",shop_address);
-        newValues.put("shop_last_visit",shop_last_visit);
+
         db.insert(SHOP_TABLE, null, newValues);
         return true;
     }
@@ -52,14 +52,7 @@ public class DBShopsHelper extends SQLiteOpenHelper {
         int numberOFEntriesDeleted = db.delete("shop", where, new String[]{shop_name});
         return numberOFEntriesDeleted;
     }
-    public boolean updateShopLastVisit(String shop_last_visit) {
-        SQLiteDatabase db=this.getWritableDatabase();
-        ContentValues updatedValues = new ContentValues();
-        updatedValues.put("shop_last_visit",shop_last_visit);
-        String where = "shop_last_visit = ?";
-        db.update("shop", updatedValues, where, new String[]{shop_last_visit});
-        return true;
-    }
+
 public ArrayList<String > getShopAddress( String userName){
     SQLiteDatabase db=this.getWritableDatabase();
 
@@ -84,18 +77,7 @@ public ArrayList<String > getShopAddress( String userName){
         }
         return shopphones;
     }
-    // To get all Shop names depending on the bill date
-    public ArrayList<String> getShopNames(String BillDate){
-        SQLiteDatabase db=this.getWritableDatabase();
-
-        ArrayList<String>shopNames=new ArrayList<String>();
-        Cursor cursor=db.rawQuery("SELECT  * FROM "+SHOP_TABLE +" where shop_last_visit ='"+BillDate+"'" ,null);
-        cursor.moveToFirst();
-        while(!cursor.isAfterLast()){
-            shopNames.add(cursor.getString(cursor.getColumnIndex("shop_name")));
-            cursor.moveToNext();
-        }
-        return shopNames;    }
+    // To get all Shop names
     public ArrayList<String> getshopName( ){
         SQLiteDatabase db=this.getWritableDatabase();
 
@@ -108,4 +90,5 @@ public ArrayList<String > getShopAddress( String userName){
         }
         return shopNames;
     }
+
 }

@@ -38,5 +38,14 @@
             android:id="@+id/txt_cust_shopphone"
             android:textColor="#000000"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="shop Phone"
+            android:textSize="17sp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/txt_cust_test"
+            android:textColor="#000000"
+            />
     </LinearLayout>
 </LinearLayout>

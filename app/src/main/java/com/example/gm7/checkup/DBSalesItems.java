@@ -20,10 +20,10 @@ public class DBSalesItems extends SQLiteOpenHelper {
     private static final String CREATE_ITEM_TABLE ="create table "+ITEM_TABLE+"("+
             "item_id INTEGER PRIMARY KEY AUTOINCREMENT," +
             "item_price DECIMAL(19,5) NOT NULL ,"+
-            "user_name text not null ,"+
             "item_name VARCHAR(15) NOT NULL ," +
             "shop_name VARCHAR(15) NOT NULL ,"+
-            "date Date  ,"+
+            "user_name Test NOt Null ,"+
+            "item_date Date  ,"+
             "item_type VARCHAR(15) NOT NULL );";
     public DBSalesItems(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -51,7 +51,7 @@ public class DBSalesItems extends SQLiteOpenHelper {
         newValues.put("item_name",item_name);
         newValues.put("item_type",item_type);
         newValues.put("shop_name",shopName);
-        newValues.put("date",date);
+        newValues.put("item_date",date);
 
          db.insert(ITEM_TABLE, null, newValues);
         return true;
@@ -77,17 +77,17 @@ public class DBSalesItems extends SQLiteOpenHelper {
         return itemNames;
     }
     //get all date recorded in the dataBase
-    public ArrayList<String>getAllDates(String userName){
+    public ArrayList<String> getDate(String UserName ){
         SQLiteDatabase db=this.getWritableDatabase();
 
-        ArrayList<String>dates=new ArrayList<String>();
-        Cursor cursor=db.rawQuery("SELECT  * FROM "+ITEM_TABLE+" where user_name = '"+userName+"'" ,null);
+        ArrayList<String>shopNames=new ArrayList<String>();
+        Cursor cursor=db.rawQuery("SELECT  * FROM "+ITEM_TABLE +" where user_name= '"+UserName+"'",null);
         cursor.moveToFirst();
         while(!cursor.isAfterLast()){
-            dates.add(cursor.getString(cursor.getColumnIndex("date")));
+            shopNames.add(cursor.getString(cursor.getColumnIndex("item_date")));
             cursor.moveToNext();
         }
-        return dates;
+        return shopNames;
     }
 
 
