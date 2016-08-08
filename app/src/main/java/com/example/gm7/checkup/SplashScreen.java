@@ -3,6 +3,7 @@ package com.example.gm7.checkup;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import com.askerlap.emadahmed.checkup.R;
 
@@ -20,6 +21,7 @@ private LoginDataBaseAdapter login_helper;
         getSupportActionBar().hide();
         login_helper=new LoginDataBaseAdapter(this);
         login_helper.open();
+
         Thread timerThread = new Thread(){
             public void run(){
                 try{
@@ -28,7 +30,7 @@ private LoginDataBaseAdapter login_helper;
                     e.printStackTrace();
                 }finally{
 
-                    if(login_helper.getUserName()!=null) {
+                    if(login_helper.getUserName()!=null&& login_helper.getLoginFlag().equals("true")) {
                         Intent intent = new Intent(SplashScreen.this, MainActivity.class);
                         startActivity(intent);
                     }

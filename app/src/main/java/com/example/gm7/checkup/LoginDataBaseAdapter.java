@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import static android.R.attr.name;
 
@@ -16,7 +17,7 @@ public class LoginDataBaseAdapter {
     // SQL Statement to create a new database.
     static final String DATABASE_CREATE = "create table " + "SHOP" +
             "( " + "ID" + " integer primary key autoincrement," +
-            "USERNAME  text,EMAIL text,PASSWORD text,PHONE text,ADDRESS text,LAST_VISIT text); ";
+            "USERNAME  text,EMAIL text,PASSWORD text,login_flag text); ";
     // Variable to hold the database instance
     public SQLiteDatabase db;
     // Context of the application using the database.
@@ -48,25 +49,23 @@ public class LoginDataBaseAdapter {
         newValues.put("USERNAME", userName);
         newValues.put("EMAIL", email);
         newValues.put("PASSWORD", password);
-        newValues.put("PHONE", "01015639329");
-        newValues.put("ADDRESS","Kafr ali");
-        newValues.put("LAST_VISIT","10am");
+        newValues.put("login_flag","true");
 
         // Insert the row into your table
-        db.insert("SHOP", null, newValues);
+        db.insert(DATABASE_NAME, null, newValues);
         ///Toast.makeText(context, "Reminder Is Successfully Saved", Toast.LENGTH_LONG).show();
     }
 
     public int deleteEntry(String UserName) {
         //String id=String.valueOf(ID);
         String where = "USERNAME=?";
-        int numberOFEntriesDeleted = db.delete("SHOP", where, new String[]{UserName});
+        int numberOFEntriesDeleted = db.delete(DATABASE_NAME, where, new String[]{UserName});
         // Toast.makeText(context, "Number fo Entry Deleted Successfully : "+numberOFEntriesDeleted, Toast.LENGTH_LONG).show();
         return numberOFEntriesDeleted;
     }
 
     public String getSinlgeEntry(String userName) {
-        Cursor cursor = db.query("SHOP", null, "USERNAME=? ", new String[]{userName}, null, null, null);
+        Cursor cursor = db.query(DATABASE_NAME, null, "USERNAME=? ", new String[]{userName}, null, null, null);
         //Cursor cursor=db.query("LOGIN", null, "EMAIL=?", new String[]{email}, null, null, null);
         if (cursor.getCount() < 1) // UserName Not Exist
         {
@@ -80,7 +79,7 @@ public class LoginDataBaseAdapter {
     }
 
     public String getSinlgeEnt(String userName) {
-        Cursor cursor = db.query("SHOP", null, "EMAIL=? ", new String[]{userName}, null, null, null);
+        Cursor cursor = db.query(DATABASE_NAME, null, "EMAIL=? ", new String[]{userName}, null, null, null);
 
         if (cursor.getCount() < 1) // UserName Not Exist
         {
@@ -101,13 +100,13 @@ public class LoginDataBaseAdapter {
         updatedValues.put("PASSWORD", password);
 
         String where = "USERNAME = ?";
-        db.update("SHOP", updatedValues, where, new String[]{userName});
+        db.update(DATABASE_NAME, updatedValues, where, new String[]{userName});
     }
 
     //
     public String check(String username) {
 
-        Cursor cursor = db.query("SHOP", null, "EMAIL=? ", new String[]{username}, null, null, null);
+        Cursor cursor = db.query(DATABASE_NAME, null, "EMAIL=? ", new String[]{username}, null, null, null);
         //Cursor cursor=db.query("LOGIN", null, "EMAIL=?", new String[]{email}, null, null, null);
         if (cursor.getCount() < 1) // UserName Not Exist
         {
@@ -124,7 +123,7 @@ public class LoginDataBaseAdapter {
     //
     public String recoverypass(String email) {
 
-        Cursor cursor = db.query("SHOP", null, "EMAIL=? ", new String[]{email}, null, null, null);
+        Cursor cursor = db.query(DATABASE_NAME, null, "EMAIL=? ", new String[]{email}, null, null, null);
         //Cursor cursor=db.query("LOGIN", null, "EMAIL=?", new String[]{email}, null, null, null);
         if (cursor.getCount() < 1) // UserName Not Exist
         {
@@ -149,5 +148,22 @@ public class LoginDataBaseAdapter {
             }
             return password;
         }
+    public String getLoginFlag( ){
+        String loginFlag=null;
+
+        Cursor cursor = db.rawQuery("select login_flag from " + DATABASE_NAME, null);
+        cursor.moveToFirst();
+
+        if(cursor.moveToFirst()){
+            loginFlag=cursor.getString(cursor.getColumnIndex("login_flag"));
+        }
+        return loginFlag;
+    }
+    public void updateFlag(String newValue ,String username) {
+
+        ContentValues values= new ContentValues();
+        values.put("login_flag ",newValue);
+        db.update(DATABASE_NAME, values, "USERNAME = '"+username+"'", null);
+    }
 }
 

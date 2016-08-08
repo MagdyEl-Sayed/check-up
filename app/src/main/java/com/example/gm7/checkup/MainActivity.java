@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 int counter=0;
     Animation fade_in, fade_out;
     ViewFlipper viewFlipper;
+    LoginDataBaseAdapter loginHelper;
     private Button billDetails,shopDetails,sales_items;
 
     //Fuck u _!_
@@ -24,6 +25,8 @@ int counter=0;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_man_menu   );
+        loginHelper=new LoginDataBaseAdapter(this);
+        loginHelper.open();
         viewFlipper = (ViewFlipper) this.findViewById(R.id.bckgrndViewFlipper1);
         fade_in = AnimationUtils.loadAnimation(this,
                 android.R.anim.fade_in);
@@ -71,6 +74,9 @@ int counter=0;
         int id=item.getItemId();
         if(id==R.id.action_aboutapp){
             startActivity(new Intent(MainActivity.this,About_app.class));
+        } else if(id==R.id.action_logout){
+            loginHelper.updateFlag("false",loginHelper.getUserName());
+            startActivity(new Intent(MainActivity.this,Login.class));
         }
         return true;
     }

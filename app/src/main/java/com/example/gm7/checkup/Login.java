@@ -60,6 +60,7 @@ public class Login extends AppCompatActivity {
         loginDataBaseAdapter = new LoginDataBaseAdapter(this);
         shopHelper=new DBShopsHelper(this);
         loginDataBaseAdapter = loginDataBaseAdapter.open();
+
         txt=(TextView)findViewById(R.id.signup);
         txt.setPaintFlags(txt.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         txt.setOnClickListener(new View.OnClickListener() {
