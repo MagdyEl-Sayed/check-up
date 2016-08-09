@@ -46,7 +46,7 @@ int counter=0;
         shopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,Shops.class));
+                startActivity(new Intent(MainActivity.this,BillDetails.class));
             }
         });
 

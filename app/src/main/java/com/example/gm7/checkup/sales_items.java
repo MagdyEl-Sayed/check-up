@@ -44,7 +44,7 @@ private DBSalesItems SalesHelper;
         itemName=(EditText)findViewById(R.id.ed_itemname);
         itemType=(EditText)findViewById(R.id.ed_itemtype);
         itemPrice=(EditText)findViewById(R.id.ed_itemprice);
-        shopAddress=(EditText)findViewById(R.id.ed_shopname);
+        Toast.makeText(getApplicationContext(),ListAct.SIZE+" size",Toast.LENGTH_LONG).show();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,15 +61,16 @@ private DBSalesItems SalesHelper;
                    SalesHelper.insertEntryItems(loginHelper.getUserName(),iPrice,iName,iType,sName,strdate1);
 
                     ShopsHelper.insertShop(loginHelper.getUserName(),sName,sPhone,sAddress,strdate1);
-                    Snackbar.make(view, "Your Money now are safe to track", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
+
                     try {
+                        Snackbar.make(view, "Your Money now are safe to track", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
                         Thread.sleep(1000);
 
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    Toast.makeText(getApplicationContext(),sAddress,Toast.LENGTH_LONG).show();
+
                     finish();
                 }
             }

@@ -84,26 +84,17 @@ public ArrayList<String > getShopAddress( String userName){
         }
         return shopphones;
     }
-    public ArrayList<String> getShopNames(){
+    // To get all Shop names depending on the bill date
+    public ArrayList<String> getShopNames(String BillDate){
         SQLiteDatabase db=this.getWritableDatabase();
 
         ArrayList<String>shopNames=new ArrayList<String>();
-        Cursor cursor=db.rawQuery("SELECT  * FROM "+SHOP_TABLE ,null);
+        Cursor cursor=db.rawQuery("SELECT  * FROM "+SHOP_TABLE +" where shop_last_visit ='"+BillDate+"'" ,null);
         cursor.moveToFirst();
         while(!cursor.isAfterLast()){
             shopNames.add(cursor.getString(cursor.getColumnIndex("shop_name")));
             cursor.moveToNext();
         }
         return shopNames;    }
-    public ArrayList<String> getLasttVisit(){
-        SQLiteDatabase db=this.getWritableDatabase();
 
-        ArrayList<String>shopNames=new ArrayList<String>();
-        Cursor cursor=db.rawQuery("SELECT  * FROM "+SHOP_TABLE ,null);
-        cursor.moveToFirst();
-        while(!cursor.isAfterLast()){
-            shopNames.add(cursor.getString(cursor.getColumnIndex("shop_last_visit")));
-            cursor.moveToNext();
-        }
-        return shopNames;    }
 }

@@ -59,7 +59,7 @@
         <activity android:name="com.example.gm7.checkup.About_app" />
         <activity android:name="com.example.gm7.checkup.Splash_Login" />
         <activity
-            android:name="com.example.gm7.checkup.Shops"
+            android:name="com.example.gm7.checkup.BillDetails"
             android:parentActivityName="com.example.gm7.checkup.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -74,6 +74,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gm7.checkup.MainActivity" />
         </activity>
+        <activity android:name="com.example.gm7.checkup.ShopDetails"></activity>
     </application>
 
 </manifest>

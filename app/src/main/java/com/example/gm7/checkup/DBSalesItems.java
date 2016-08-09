@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 /**
  * Created by GM7 on 27/07/2016.
  */
@@ -61,16 +63,31 @@ public class DBSalesItems extends SQLiteOpenHelper {
         int numberOFEntriesDeleted = db.delete(ITEM_TABLE, where, new String[]{item_name});
         return numberOFEntriesDeleted;
     }
-    public String getItemDate(){
-        String password=null;
-        SQLiteDatabase db=this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("select date from " + ITEM_TABLE , null);
-        cursor.moveToFirst();
+ //select items which have the same date and from same shop
+    public ArrayList<String> getItems(String shopName ){
+        SQLiteDatabase db=this.getWritableDatabase();
 
-        if(cursor.moveToFirst()){
-            password=cursor.getString(cursor.getColumnIndex("date"));
+        ArrayList<String>itemNames=new ArrayList<String>();
+        Cursor cursor=db.rawQuery("SELECT  item_name FROM "+ITEM_TABLE+" where shop_name = '"+shopName+"'",null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            itemNames.add(cursor.getString(cursor.getColumnIndex("item_name")));
+            cursor.moveToNext();
         }
-        return password;
+        return itemNames;
+    }
+    //get all date recorded in the dataBase
+    public ArrayList<String>getAllDates(String userName){
+        SQLiteDatabase db=this.getWritableDatabase();
+
+        ArrayList<String>dates=new ArrayList<String>();
+        Cursor cursor=db.rawQuery("SELECT  * FROM "+ITEM_TABLE+" where user_name = '"+userName+"'" ,null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            dates.add(cursor.getString(cursor.getColumnIndex("date")));
+            cursor.moveToNext();
+        }
+        return dates;
     }
 
 
