@@ -91,5 +91,18 @@ public ArrayList<String > getShopAddress( String userName){
         }
         return shopNames;
     }
+    //get all shop Addresses
+    public ArrayList<String> getshopAddress( ){
+        SQLiteDatabase db=this.getWritableDatabase();
+
+        ArrayList<String>shopAddress=new ArrayList<String>();
+        Cursor cursor=db.rawQuery("SELECT  * FROM "+SHOP_TABLE ,null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            shopAddress.add(cursor.getString(cursor.getColumnIndex("shop_address")));
+            cursor.moveToNext();
+        }
+        return shopAddress;
+    }
 
 }

@@ -1,6 +1,8 @@
 package com.example.gm7.checkup;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,11 +22,11 @@ import java.util.ArrayList;
 import java.util.zip.Inflater;
 
 public class ShopDetails extends AppCompatActivity {
-private ListView list;
+public ListView list;
     DBSalesItems salesHelper;
     DBShopsHelper shopsHelper;
-    private  ArrayList<String> shopNames;
-    private ArrayList<String> names;
+    private  ArrayList<String> names,shopNames,Addresses;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,9 +36,11 @@ private ListView list;
         shopsHelper=new DBShopsHelper(this);
         shopNames=new ArrayList<>();
         names=new ArrayList<>();
+        Addresses=new ArrayList<>();
         shopNames=shopsHelper.getShopPhones();
+        Addresses=shopsHelper.getshopAddress();
         names=shopsHelper.getshopName();
-        list.setAdapter(new customAdapter(this,shopNames,names));
+        list.setAdapter(new customAdapter(this,shopNames,names,Addresses));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
@@ -56,16 +61,19 @@ private ListView list;
 
     class customAdapter extends BaseAdapter{
         private final Context mcontext;
-        private ArrayList<String> shopNames,NAMES;
-        customAdapter(Context context,ArrayList<String> shopNames,ArrayList<String>names){
+        private ArrayList<String> shopNames,NAMES,shopAddress;
+        customAdapter(Context context,ArrayList<String> shopNames,ArrayList<String>names,ArrayList<String>Address){
             this.mcontext=context;
             this.NAMES=names;
+            this.shopAddress=Address;
             this.shopNames=shopNames;
         }
 
         @Override
         public int getCount() {
-            return shopNames.size();
+            int size=shopNames.size();
+
+            return size ;
         }
 
         @Override
@@ -84,14 +92,30 @@ private ListView list;
             LayoutInflater inflater = (LayoutInflater) mcontext
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View myView=inflater.inflate(R.layout.custom_shop_layout,viewGroup,false);
-            TextView shopName,Shop_phone,test;
+            final TextView shopName,Shop_phone,Shop_Address;
             shopName=(TextView)myView.findViewById(R.id.txt_cust_shopname);
             Shop_phone=(TextView)myView.findViewById(R.id.txt_cust_shopphone);
-            test=(TextView)myView.findViewById(R.id.txt_cust_test);
-            test.setText(new DBSalesItems(mcontext).getItems(names.get(i)).size()+"");
+            Shop_Address=(TextView)myView.findViewById(R.id.txt_cust_test);
+            Shop_Address.setText(shopAddress.get(i));
             Shop_phone.setText("+20"+shopNames.get(i));
            shopName.setText(NAMES.get(i));
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    call(Shop_phone.getText().toString());
+                }
+            });
             return myView;
+        }
+        private void call(String number) {
+            Intent in=new Intent(Intent.ACTION_DIAL,Uri.parse("tel: "+ number));
+            try{
+                startActivity(in);
+            }
+
+            catch (android.content.ActivityNotFoundException ex){
+                Toast.makeText(getApplicationContext(),"Can't establish the call",Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }
