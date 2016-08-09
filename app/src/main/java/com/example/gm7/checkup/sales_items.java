@@ -44,7 +44,6 @@ private DBSalesItems SalesHelper;
         itemName=(EditText)findViewById(R.id.ed_itemname);
         itemType=(EditText)findViewById(R.id.ed_itemtype);
         itemPrice=(EditText)findViewById(R.id.ed_itemprice);
-        Toast.makeText(getApplicationContext(),ListAct.SIZE+" size",Toast.LENGTH_LONG).show();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

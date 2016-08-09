@@ -57,7 +57,6 @@
             android:value="931e58a6acb15fcc014d72ec2bbcf6b7ef6cf762" />
 
         <activity android:name="com.example.gm7.checkup.About_app" />
-        <activity android:name="com.example.gm7.checkup.Splash_Login" />
         <activity
             android:name="com.example.gm7.checkup.BillDetails"
             android:parentActivityName="com.example.gm7.checkup.MainActivity">

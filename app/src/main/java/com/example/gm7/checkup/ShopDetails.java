@@ -97,7 +97,7 @@ public ListView list;
             Shop_phone=(TextView)myView.findViewById(R.id.txt_cust_shopphone);
             Shop_Address=(TextView)myView.findViewById(R.id.txt_cust_test);
             Shop_Address.setText(shopAddress.get(i));
-            Shop_phone.setText("+20"+shopNames.get(i));
+            Shop_phone.setText("+20"+shopNames.get(i) );
            shopName.setText(NAMES.get(i));
             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
