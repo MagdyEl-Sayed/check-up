@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Check Up</string>
+    <!--sign up activity strings-->
+    <string name="app_sign">Créer un compte</string>
+    <string name="Registration">Enregistrement</string>
+    <string name="signup_userName">Nom d'utilisateur</string>
+    <string name="signup_Email">Email</string>
+    <string name="signup_password">Mot de passe</string>
+    <string name="sign_confirm">Confirmer</string>
+    <string name="signup_btn">Créer un compte</string>
+    <string name="signup_user_error">Erreur de nom d'utilisateur</string>
+    <string name="signup_email_error">Erreur de courrier électronique</string>
+    <string name="signup_vaild_email">Adresse e-mail invalide</string>
+    <string name="signup_pass_error">Erreur mot de passe</string>
+    <string name="signup_pass_length_error">Eu moins 8 caractères</string>
+    <string name="signup_pass_match">Mot de passe ne correspond pas</string>
+    <string name="signup_email_exist">L'adresse mail est déjà enregistrée</string>
+    <string name="login_error">L'identifiant ou le mot de passe est incorrect</string>
+    <string name="auth">autorisation...</string>
+    <string name="account_succ">Compte créé</string>
+    <!--Login activity strings-->
+    <string name="login_userName">nom d'utilisateur ou adresse e-mail</string>
+    <string name="login_pass">mot de passe</string>
+    <string name="login_or">ou..</string>
+    <string name="login_no_account">Pas de compte?</string>
+    <string name="login_sign"> créer une!</string>
+    <string name="login_btn">s'identifier</string>
+    <!--main activity strings-->
+    <string name="auth_delete">autorisation de suppression des données...</string>
+    <string name="app_bill_details">facture détaillée</string>
+    <string name="main_btn_shops">boutiques emplacements</string>
+    <string name="main_btn_sales">Achats</string>
+    <string name="title_activity_main__menu">menu principal</string>
+    <string name="main_log_out">se déconnecter</string>
+    <string name="main_clear_data">effacer les données</string>
+    <string name="about_app">à propos de l'application</string>
+    <!--new items activity strings-->
+    <string name="title_activity_sales_items">nouvel article</string>
+    <string name="itemName">nom d'élément:</string>
+    <string name="itemPrice">prix d'élément:</string>
+    <string name="itemType">type d'élément:</string>
+    <string name="shopName">nom de la boutique:</string>
+    <string name="shopPhone">boutique téléphone:</string>
+    <string name="shopAddress">Adresse de la boutique:</string>
+    <string name="add_item_error">s'il vous plaît remplir tous les éléments</string>
+    <!---->
+
+</resources>
