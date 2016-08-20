@@ -18,7 +18,7 @@ public class DBShopsHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION=1;
     private static final String CREATE_SHOP_TABLE="create table "+SHOP_TABLE+"("+"shop_id INTEGER PRIMARY KEY AUTOINCREMENT," +
             "user_name TEXT NOT NULL ,"+
-            "shop_name text NOT NULL ," +
+            "shop_name text NOT NULL UNIQUE ," +
             "shop_phone INTEGER NOT NULL ,"+
             "shop_address text NOt NULL "+
 

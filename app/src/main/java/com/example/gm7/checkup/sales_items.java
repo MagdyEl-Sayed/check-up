@@ -1,5 +1,6 @@
 package com.example.gm7.checkup;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -52,23 +53,25 @@ private DBSalesItems SalesHelper;
                 int sPhone=Integer.parseInt(shopPhone.getText().toString()); double iPrice=Double.parseDouble(itemPrice.getText().toString());
                 if(iName.isEmpty()|| iType.isEmpty()||
                        sName.isEmpty()||sAddress.isEmpty()||(sPhone+"").isEmpty()){
-                    Snackbar.make(view,"please fill all boxes above ",Snackbar.LENGTH_LONG).setAction("Action",null)
+                    Snackbar.make(view,getResources().getString(R.string.add_item_error),Snackbar.LENGTH_LONG).setAction("Action",null)
                             .show();
                 } else {
                     ShopsHelper.getWritableDatabase();
                     SalesHelper.getWritableDatabase();
                    SalesHelper.insertEntryItems(loginHelper.getUserName(),iPrice,iName,iType,sName,strdate1);
+                    if(!ShopsHelper.getshopName().contains(sName)){
+                    ShopsHelper.insertShop(loginHelper.getUserName(),sName,sPhone,sAddress);}
+                    final ProgressDialog progressDialog = new ProgressDialog(sales_items.this);
+                    progressDialog.setIndeterminate(true);
+                    progressDialog.setMessage(getResources().getString(R.string.auth));
+                    progressDialog.show();
+                    new android.os.Handler().postDelayed(
+                            new Runnable() {
+                                public void run() {
 
-                    ShopsHelper.insertShop(loginHelper.getUserName(),sName,sPhone,sAddress);
-
-                    try {
-                        Snackbar.make(view, "Your Money now are safe to track", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-                        Thread.sleep(1000);
-
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                                    progressDialog.dismiss();
+                                }
+                            },  1000);
 
                     finish();
                 }

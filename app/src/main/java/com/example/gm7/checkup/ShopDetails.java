@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -93,6 +94,13 @@ public ListView list;
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View myView=inflater.inflate(R.layout.custom_shop_layout,viewGroup,false);
             final TextView shopName,Shop_phone,Shop_Address;
+            ImageView shop_location=(ImageView)myView.findViewById(R.id.img_shop_location);
+            shop_location.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(mcontext,"Location Clicked",Toast.LENGTH_LONG).show();
+                }
+            });
             shopName=(TextView)myView.findViewById(R.id.txt_cust_shopname);
             Shop_phone=(TextView)myView.findViewById(R.id.txt_cust_shopphone);
             Shop_Address=(TextView)myView.findViewById(R.id.txt_cust_test);

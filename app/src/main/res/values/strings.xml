@@ -1,22 +1,60 @@
 <resources>
     <string name="app_name">Check Up</string>
-    <string name="app_shop_details">Shop Details</string>
+    <!--sign up activity strings-->
+    <string name="app_sign">Create new Account</string>
+    <string name="Registration">Registration</string>
+    <string name="signup_userName">User Name</string>
+    <string name="signup_Email">Email</string>
+    <string name="signup_password">Password</string>
+    <string name="sign_confirm">Confirm Password</string>
+    <string name="signup_btn">Sign up</string>
+    <string name="signup_user_error">Username Should not be blank</string>
+    <string name="signup_email_error">Email Should not be blank</string>
+    <string name="signup_vaild_email">Please Enter a valid Email Address</string>
+    <string name="signup_pass_error">Password Should not be blank</string>
+    <string name="signup_pass_length_error">Enter at least 8 characters.</string>
+    <string name="signup_pass_match">Password does not match</string>
+    <string name="signup_email_exist">This Email Already Exist</string>
+    <string name="auth">Authenticating...</string>
+    <string name="account_succ">Account Successfully Created </string>
+    <!--Login activity strings-->
+    <string name="login_userName">User name or Email</string>
+    <string name="login_pass">Password</string>
+    <string name="login_or">OR..</string>
+    <string name="login_no_account">Don\'t have an account?</string>
+    <string name="login_sign"> Sign up </string>
+    <string name="login_error">User Name or Password does not match</string>
+    <string name="login_btn">Login</string>
+    <!--main activity strings-->
+    <string name="auth_delete">Deleting...</string>
+    <string name="app_bill_details">Bill Report</string>
+    <string name="main_btn_shops">Shops</string>
+    <string name="main_btn_sales">Sales Items</string>
     <string name="title_activity_main__menu">Main Menu</string>
-    <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="facebook_app_id">281836965505728</string>
-    <string name="shopName">shop name: </string>
-    <string name="shopPhone">shop phone: </string>
-    <string name="shopAddress">shop address: </string>
-    <string name="lastVisit">last visit: </string>
-    <string name="totalBill">total bill: </string>
-    <string name="title_activity_sales__items">My sales</string>
+    <string name="main_log_out">Log Out</string>
+    <string name="main_clear_data">Clear my data</string>
+    <string name="about_app">About App</string>
+    <!--new items activity strings-->
     <string name="title_activity_sales_items">New Items</string>
     <string name="itemName">Item Name:</string>
     <string name="itemPrice">Item Price:</string>
     <string name="itemType">Item Type:</string>
+    <string name="shopName">shop name: </string>
+    <string name="shopPhone">shop phone: </string>
+    <string name="shopAddress">shop address: </string>
+    <string name="add_item_error">please fill all boxes above</string>
+    <!---->
+    <string name="app_report_type">Select Bill Type</string>
+    <string name="app_shop_details">Shop Details</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="facebook_app_id">281836965505728</string>
+    <string name="lastVisit">last visit: </string>
+    <string name="totalBill">total bill: </string>
+    <string name="title_activity_sales__items">My sales</string>
     <string name="salesDate">Date</string>
     <string name="bill_date">Date: </string>
     <string name="your_string"><u>SignUp</u></string>
+
 
 </resources>

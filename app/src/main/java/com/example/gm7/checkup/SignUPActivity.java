@@ -42,7 +42,6 @@ public class SignUPActivity extends AppCompatActivity {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
 
         btnCreateAccount = (Button) findViewById(R.id.buttonCreateAccount);
-//        btnrecoverypass = (Button) findViewById(R.id.buttonrecoverypass);
         btnCreateAccount.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -57,11 +56,11 @@ public class SignUPActivity extends AppCompatActivity {
                 //	{
                 //Toast.makeText(getApplicationContext(), "Field Vaccant", Toast.LENGTH_LONG).show();
                 if (editTextUserName.getText().toString().isEmpty()) {
-                    editTextUserName.setError("UserName Should not be blank");
+                    editTextUserName.setError(getResources().getString(R.string.signup_user_error));
                     return;
                 }
                 if (editTextEmail.getText().toString().isEmpty()) {
-                    editTextEmail.setError("Email Should not be blank");
+                    editTextEmail.setError(getResources().getString(R.string.signup_email_error));
                     return;
                 }
                 if (!editTextEmail.getText().toString().isEmpty()) {
@@ -69,28 +68,28 @@ public class SignUPActivity extends AppCompatActivity {
                     java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
                     java.util.regex.Matcher m = p.matcher(email);
                     if (!m.matches()) {
-                        editTextEmail.setError("Please Check and Enter a valid Email Address");
+                        editTextEmail.setError(getResources().getString(R.string.signup_vaild_email));
                         return;
                     }
 
                 }
                 if (editTextPassword.getText().toString().isEmpty()) {
-                    editTextPassword.setError("Password Should not be blank");
+                    editTextPassword.setError(getResources().getString(R.string.signup_pass_error));
                     return;
                 }
                 if (password.length() < 8) {
-                    editTextPassword.setError("Enter at least 8 characters.");
+                    editTextPassword.setError(getResources().getString(R.string.signup_pass_length_error));
                     return;
                 }
                 if (editTextConfirmPassword.getText().toString().isEmpty()) {
-                    editTextConfirmPassword.setError("Password Should not be blank");
+                    editTextConfirmPassword.setError(getResources().getString(R.string.signup_pass_error));
                     return;
                 }
 
                 // check if both password matches
                 if (!password.equals(confirmPassword)) {
                     //Toast.makeText(getApplicationContext(), "Password does not match", Toast.LENGTH_LONG).show();
-                    editTextConfirmPassword.setError("Password does not match");
+                    editTextConfirmPassword.setError(getResources().getString(R.string.signup_pass_match));
                     return;
                 }
                 //
@@ -102,13 +101,13 @@ public class SignUPActivity extends AppCompatActivity {
                         // Save the Data in Database
                         final ProgressDialog progressDialog = new ProgressDialog(SignUPActivity.this);
                         progressDialog.setIndeterminate(true);
-                        progressDialog.setMessage("Authenticating...");
+                        progressDialog.setMessage(getResources().getString(R.string.auth));
                         progressDialog.show();
                         loginDataBaseAdapter.insertEntry(userName, password, email);
                         new android.os.Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
-                                        Toast.makeText(getApplicationContext(), "Account Successfully Created ", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(),getResources().getString(R.string.account_succ), Toast.LENGTH_LONG).show();
                                         Intent intent = new Intent(SignUPActivity.this, Login.class);
                                         startActivity(intent);
                                         progressDialog.dismiss();
@@ -116,24 +115,14 @@ public class SignUPActivity extends AppCompatActivity {
                                 }, 3000);
 
                     } else {
-                        editTextEmail.setError("This Email EXIST");
-                        Toast.makeText(getApplicationContext(), "This Email Already Exist", Toast.LENGTH_LONG).show();
+                        editTextEmail.setError(getResources().getString(R.string.signup_email_exist));
                         return;
                     }
                 }
 
             }
         });
-//        btnrecoverypass.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String email = editTextEmail.getText().toString();
-//                String storedPassword = loginDataBaseAdapter.recoverypass(email);
-//                sendEmail(email, storedPassword);
-//
-//
-//            }
-//        });
+
     }
 
     @Override
@@ -142,28 +131,6 @@ public class SignUPActivity extends AppCompatActivity {
         super.onDestroy();
 
         loginDataBaseAdapter.close();
-    }
-
-    protected void sendEmail(String mail, String message) {
-        Log.i("Send email", "");
-        //String[] TO = {""};
-        //String[] message = {""};
-        Intent emailIntent = new Intent(Intent.ACTION_SEND);
-
-        emailIntent.setData(Uri.parse("mailto:"));
-        emailIntent.setType("text/plain");
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, mail);
-        //emailIntent.putExtra(Intent.EXTRA_CC, CC);
-        //emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
-        emailIntent.putExtra(Intent.EXTRA_TEXT, message);
-
-        try {
-            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
-            finish();
-            Log.i("Finished sending email...", "finish");
-        } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(SignUPActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
-        }
     }
 
     @Override

@@ -110,11 +110,11 @@ public class Login extends AppCompatActivity {
 
                 //
                 if (txt1.getText().toString().isEmpty()) {
-                    txt1.setError("UserName Should not be blank");
+                    txt1.setError(getResources().getString(R.string.signup_user_error));
                     return;
                 }
                 if (txt2.getText().toString().isEmpty()) {
-                    txt2.setError("Password Should not be blank");
+                    txt2.setError(getResources().getString(R.string.signup_pass_error));
                     return;
                 }
 
@@ -123,7 +123,7 @@ public class Login extends AppCompatActivity {
                    loginDataBaseAdapter.updateFlag("true",loginDataBaseAdapter.getUserName());
                     final ProgressDialog progressDialog = new ProgressDialog(Login.this);
                     progressDialog.setIndeterminate(true);
-                    progressDialog.setMessage("Authenticating...");
+                    progressDialog.setMessage(getResources().getString(R.string.auth));
                     progressDialog.show();
                     new android.os.Handler().postDelayed(
                             new Runnable() {
@@ -142,7 +142,7 @@ public class Login extends AppCompatActivity {
 
                 } else {
 //                    img.setVisibility(View.VISIBLE);
-                    Toast.makeText(getBaseContext(), "User Name or Password does not match", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), getResources().getString(R.string.login_error), Toast.LENGTH_LONG).show();
                 }
 
 
@@ -204,14 +204,5 @@ protected void facebookSDKInitialize(){
         // Close The Database
         loginDataBaseAdapter.close();
     }
-/*
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-switch (item.getItemId()){
-    case android.R.id.home:
-        NavUtils.navigateUpFromSameTask(this);
-        return true;
-}
-        return super.onOptionsItemSelected(item);
-    }*/
+
 }

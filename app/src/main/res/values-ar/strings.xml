@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Check Up</string>
+        <!--sign up activity strings-->
+    <string name="app_sign">تسجيل حساب جديد</string>
+    <string name="Registration">تسجيل</string>
+    <string name="signup_userName">اسم المستخدم</string>
+    <string name="signup_Email">الإيميل</string>
+    <string name="signup_password">كلمة المرور</string>
+    <string name="sign_confirm">تأكيد كلمة المرور</string>
+    <string name="signup_btn">انشاء حساب</string>
+    <string name="signup_user_error">يجب ادخال اسم المستخدم</string>
+    <string name="signup_email_error">يجب ادخال البريد الإلكتروني</string>
+    <string name="signup_vaild_email">البريد الإلكتروني غير صالح</string>
+    <string name="signup_pass_error">يجب ادخال كلمة المرور</string>
+    <string name="signup_pass_length_error">يجب ان تكون 8 حروف علي الأقل</string>
+    <string name="signup_pass_match">كلمة المرور لم تتطابق! حاول مره اخري</string>
+    <string name="signup_email_exist">هذا الإيميل موجود بالفعل</string>
+    <string name="login_error">اسم المستخدم او كلمة المرور غير صحيحة</string>
+    <string name="auth">تحميل...</string>
+    <string name="account_succ">تم إنشاء حساب بنجاح </string>
+    <!--Login activity strings-->
+    <string name="login_userName">اسم المستخدم او الايميل</string>
+    <string name="login_pass">كلمة المرور</string>
+    <string name="login_or">أو..</string>
+    <string name="login_no_account">ليس لديك حساب؟</string>
+    <string name="login_sign"> سجل الآن </string>
+    <string name="login_btn">دخول</string>
+    <!--main activity strings-->
+    <string name="auth_delete">جاري حذف البيانات...</string>
+    <string name="app_bill_details">تقرير فاتورة</string>
+    <string name="main_btn_shops">اماكن التسوق</string>
+    <string name="main_btn_sales">المشتريات</string>
+    <string name="title_activity_main__menu">الرئيسية</string>
+    <string name="main_log_out">تسجيل الخروج</string>
+    <string name="main_clear_data">حذف البيانات</string>
+    <string name="about_app">عن التطبيق</string>
+    <!--new items activity strings-->
+    <string name="title_activity_sales_items">عنصر جديد</string>
+    <string name="itemName">اسم العنصر:</string>
+    <string name="itemPrice">سعر العنصر:</string>
+    <string name="itemType">نوعية العنصر:</string>
+    <string name="shopName">اسم محل الشراء:</string>
+    <string name="shopPhone">رقم هاتف المحل:</string>
+    <string name="shopAddress">عنوان المحل: </string>
+    <string name="add_item_error">من فضلك إملا كافة البيانات السابقة</string>
+    <!---->
+
+</resources>

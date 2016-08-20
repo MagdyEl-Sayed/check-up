@@ -26,7 +26,6 @@ int counter=0;
     DBSalesItems salesHelper;
     private Button billDetails,shopDetails,sales_items;
 
-    //Fuck u _!_
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +57,7 @@ int counter=0;
         billDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,BillDetails.class));
+                startActivity(new Intent(MainActivity.this,ReportType.class));
             }
         });
         shopDetails.setOnClickListener(new View.OnClickListener() {
@@ -90,7 +89,7 @@ int counter=0;
             ArrayList<String> Names=shopsHelper.getshopName();
             final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
             progressDialog.setIndeterminate(true);
-            progressDialog.setMessage("Authenticating...");
+            progressDialog.setMessage(getResources().getString(R.string.auth_delete));
             progressDialog.show();
             new android.os.Handler().postDelayed(
                     new Runnable() {

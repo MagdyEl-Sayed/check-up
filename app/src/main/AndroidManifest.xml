@@ -24,23 +24,15 @@
         </activity>
         <activity
             android:name="com.example.gm7.checkup.Login"
-            android:label="login"
-            android:parentActivityName="com.example.gm7.checkup.Splash_Login">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gm7.checkup.Splash_Login" />
-        </activity>
+            android:label="@string/login_btn"
+          />
         <activity
             android:name="com.example.gm7.checkup.SignUPActivity"
-            android:label="Create New Account"
-            android:parentActivityName="com.example.gm7.checkup.Splash_Login">
-            <meta-data
-                android:name="android.support.PARENT_Activity"
-                android:value="com.example.gm7.checkup.Splash_Login" />
-        </activity>
+            android:label="@string/app_sign"
+            />
         <activity
             android:name="com.example.gm7.checkup.MainActivity"
-            android:label="Main Menu" />
+            android:label="@string/title_activity_main__menu" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -59,10 +51,11 @@
         <activity android:name="com.example.gm7.checkup.About_app" />
         <activity
             android:name="com.example.gm7.checkup.BillDetails"
-            android:parentActivityName="com.example.gm7.checkup.MainActivity">
+            android:label="@string/app_bill_details"
+            android:parentActivityName="com.example.gm7.checkup.ReportType">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gm7.checkup.MainActivity" />
+                android:value="com.example.gm7.checkup.ReportType" />
         </activity>
         <activity
             android:name="com.example.gm7.checkup.sales_items"
@@ -73,9 +66,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gm7.checkup.MainActivity" />
         </activity>
-        <activity android:name="com.example.gm7.checkup.ShopDetails"
+        <activity
+            android:name="com.example.gm7.checkup.ShopDetails"
+            android:label="@string/app_shop_details"
+            android:parentActivityName="com.example.gm7.checkup.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gm7.checkup.MainActivity" />
+        </activity>
+        <activity android:name="com.example.gm7.checkup.ReportType"
+            android:label="@string/app_report_type"
             android:parentActivityName="com.example.gm7.checkup.MainActivity"
-            android:label="@string/app_shop_details">
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gm7.checkup.MainActivity" />

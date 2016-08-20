@@ -2,10 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
+    android:layout_weight="3"
     android:layout_height="wrap_content">
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_marginLeft="10dp"
+
     android:layout_marginTop="5dp"
     android:gravity="center"
     android:layout_height="wrap_content">
@@ -15,8 +17,9 @@
         android:src="@drawable/store_icon"/>
 </LinearLayout>
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:orientation="vertical"
+        android:layout_weight="2"
         android:gravity="center"
         android:layout_gravity="center"
         android:layout_height="wrap_content">
@@ -25,7 +28,9 @@
             android:layout_height="wrap_content"
             android:text="shop name"
             android:textSize="17sp"
+            android:layout_marginRight="15dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
             android:id="@+id/txt_cust_shopname"
             android:textColor="#000000"
             />
@@ -33,6 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="shop Phone"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"
             android:textSize="17sp"
             android:layout_marginLeft="15dp"
             android:id="@+id/txt_cust_shopphone"
@@ -42,10 +49,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="shop Phone"
+            android:layout_marginStart="15dp"
             android:textSize="17sp"
+            android:layout_marginRight="15dp"
             android:layout_marginLeft="15dp"
             android:id="@+id/txt_cust_test"
             android:textColor="#000000"
             />
     </LinearLayout>
+    <ImageView
+        android:layout_marginRight="10dp"
+        android:id="@+id/img_shop_location"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_place"/>
 </LinearLayout>

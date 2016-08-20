@@ -5,16 +5,16 @@
     <item
         android:id="@+id/action_logout"
         android:orderInCategory="100"
-        android:title="Log Out"
+        android:title="@string/main_log_out"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_delete_data"
         android:orderInCategory="100"
-        android:title="Clear my data"
+        android:title="@string/main_clear_data"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_aboutapp"
         android:orderInCategory="100"
-        android:title="About App"
+        android:title="@string/about_app"
         app:showAsAction="never" />
 </menu>

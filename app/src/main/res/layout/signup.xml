@@ -9,7 +9,7 @@
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Registration"
+    android:text="@string/Registration"
     android:textStyle="normal|bold|italic"
     android:textSize="46sp"
     android:gravity="center"
@@ -25,13 +25,14 @@
     <EditText
         android:background="@drawable/editstyle"
         android:id="@+id/editTextUserName"
-        android:hint="User Name"
+        android:hint="@string/signup_userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="normal|italic"
         android:padding="15dp"
         android:layout_marginTop="15dp"
         android:ems="10"
+        android:drawableStart="@mipmap/ic_person"
         android:drawableLeft="@mipmap/ic_person"
 
         >
@@ -43,13 +44,14 @@
         android:background="@drawable/editstyle"
         android:id="@+id/editTextEmail"
         android:padding="15dp"
-        android:hint="Email"
+        android:hint="@string/signup_Email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:inputType="textEmailAddress"
         android:ems="10"
         android:textStyle="normal|italic"
+        android:drawableStart="@mipmap/ic_mail"
         android:drawableLeft="@mipmap/ic_mail"
         />
 
@@ -58,12 +60,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:hint="Password"
+        android:hint="@string/signup_password"
         android:ems="10"
         android:padding="15dp"
         android:background="@drawable/editstyle"
         android:inputType="textPassword"
         android:textStyle="normal|italic"
+        android:drawableStart="@mipmap/ic_https"
         android:drawableLeft="@mipmap/ic_https"
         />
 
@@ -72,23 +75,25 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:hint="Confirm Password"
+        android:hint="@string/sign_confirm"
         android:background="@drawable/editstyle"
         android:ems="10"
         android:padding="15dp"
         android:inputType="textPassword"
         android:textStyle="normal|italic"
+        android:drawableStart="@mipmap/ic_https"
         android:drawableLeft="@mipmap/ic_https"
         />
 
         <Button
+
             android:id="@+id/buttonCreateAccount"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:background="@drawable/log_in"
-            android:text="SIGN UP"
+            android:text="@string/signup_btn"
             android:textSize="18sp"
             />
 
