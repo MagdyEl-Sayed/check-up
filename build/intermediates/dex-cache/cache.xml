@@ -1,3 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.google.android.exoplayer/exoplayer/r1.4.2/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="8d240fc1031d5f5e85fdc2821b166da5353084e6">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.google.android.exoplayer-exoplayer-r1.4.2_b544bebaf7a72264beee230667d48b98e34b7fe4.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.11.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="f1b135f6761a5b8d0b9bff42d1b81172a302b245">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.digits.sdk.android-digits-1.11.1_b307fe7a3b5c59648d3759520a9f52717e3e4592.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_b6fb170d3ce7f9f87f0c9708acc1f8bb9c7a3952.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.0-alpha4/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="2a25fdd20d5f75558b6011724bbfbb7d97c7f5b7">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.android.support.constraint-constraint-layout-1.0.0-alpha4_c9bf04161aa7974131805467cf596bcd2e501c2d.jar" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.mopub.volley/mopub-volley/1.1.0/4357bce66ae3bb9be50679e43df122fd0a8f3394/mopub-volley-1.1.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="4357bce66ae3bb9be50679e43df122fd0a8f3394">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/mopub-volley-1.1.0_67f1ce705afe680185263771bcf88530170cf63a.jar" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.twitter/twitter-text/1.13.0/78415b95ae3184c5926d593feab64bfc0b73b2dd/twitter-text-1.13.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="78415b95ae3184c5926d593feab64bfc0b73b2dd">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/twitter-text-1.13.0_38a617e1df4bc30cb7c35ebe8cb69a91ef06b20f.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_4f29ec8d0d92c6c4ff47131787cc7d61132779f4.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.0.0_d2a3da9b657956f83d85c6f3bcf3fbfc5d165601.jar" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.8.0/a517f29ed06be2b2879524fcd94b6e9b36e2e0b5/retrofit-1.8.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="a517f29ed06be2b2879524fcd94b6e9b36e2e0b5">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/retrofit-1.8.0_f2c3e20619585388417f83d6e1c9c29b9af888f7.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers-shim/0.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="29864b68d990da5b14dbff9fbecf10600bcf7603">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.crashlytics.sdk.android-answers-shim-0.0.3_fbe11852cb3de9533718181074840fc5450cbb82.jar" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_f07471cc8daabba9b33b6c2492a169834e3c6749.jar" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.0.0/2943c74db6d4346ab8c6531adac91fa05c137c40/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_c0262899f41df7046f4bf9a45e5f3fed820a52fd.jar" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/gson-2.4_9997a89e2f6a8966d3838b74a4f24a5486ba5fc7.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.0.0_89fa424e66f8caf064dc89fa481ed20d1659013b.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.android.support/customtabs/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.android.support-customtabs-23.4.0_5cb722f60df80ab5a9bc247a921a2b12bddda677.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter-core/1.7.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="3248e86647b947af00d355e1f65da130aa07a20c">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.twitter.sdk.android-twitter-core-1.7.0_024cefe41028e4da19e0719c667696e0bc0c1c6b.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.12/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="3575e73a22dce98f0bdbcdb475ef55a84606a9a6">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/io.fabric.sdk.android-fabric-1.3.12_102f10d8abe696039e83761003e3a5cbc7ac9901.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="fc29308a7a8f6d4407b34634eb48fb8b817f9b23">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.android.support-design-24.0.0_b91e9663161e02ec0cde181eac992fd6765ddf5d.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.0.0_3abcf5a4163c483b503e05e4d001bf0f1ef27092.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="7cb8f70e66bdc25ee66ab8351a4e7214b6517aa8">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-android-sdk-4.14.0_72bd911a9c919f8a14f109d029901283d1e2125a.jar" />
+    </item>
+    <item
+        jar="/home/emadahmed/android-studio2.2/gradle/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0-alpha4/constraint-layout-solver-1.0.0-alpha4.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="cdeb2aecf7557aa5f8d2ac0e37a0e7760f48c513">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.0-alpha4_691b0977e28bca2020ea72ecaf12cd045a13f749.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.twitter.sdk.android/twitter/1.14.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="f4b7e6b5b106eeef50a6cc6eac330f419a273c5d">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.twitter.sdk.android-twitter-1.14.1_3ff374c488f9a645b450234e74872d94b48801c0.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_d1871ebb2d1a9a03130200b99d0d0667e7797c34.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.mopub/mopub-sdk/4.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="79c79746cfc642e941247ff832924fefb2784cc1">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.mopub-mopub-sdk-4.3.0_9651d809c724d804f5ae148ff441b7024f3b9f56.jar" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_8cb1dcf68d89b3835f6b8620276bad0ce2e75a94.jar" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit-mock/1.8.0/8bc99a93998f08302e7615cca69ba8c97c6a6b2/retrofit-mock-1.8.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="08bc99a93998f08302e7615cca69ba8c97c6a6b2">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/retrofit-mock-1.8.0_682caab1730a73d01f64c49707df082fe74b5fa5.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-composer/1.0.5/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="c15baca2e57ebec0f42e5924e60f615451045388">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.twitter.sdk.android-tweet-composer-1.0.5_27c809b4485363705815c0aa4a3c1cffc96eeebc.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="894922f67adeaaef51f077a29e315da21a3382d3">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.0.0_130fa6e11decf72d43024c0f4f528083c8496fff.jar" />
+    </item>
+    <item
+        jar="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.11.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="35d0ac5ea6d575fbf5b6b8be0562e8492f20ba29">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/com.twitter.sdk.android-tweet-ui-1.11.1_ef8a9b50ee19b7ab524f091fd077717a5527aea6.jar" />
+    </item>
+    <item
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/media/emadahmed/Programs2/WORK_PLACE/AndroidWorkpalce/check-up/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0_b8be5144022e8fb2366e72814320a8797abb6dae.jar" />
+    </item>
+
+</items>
